@@ -15,7 +15,7 @@ Antes de escrever o primeiro componente, quebrar o layout do Figma em **seções
 
 | # | Parte | Status |
 | --- | --- | --- |
-| 1 | [Extrair os design tokens do Figma](01-design-tokens.md) | [ ] |
+| 1 | [Extrair os design tokens do Figma](01-design-tokens.md) | [x] fontes e tokens no `@theme` (ícones pendentes) |
 | 2 | [Mapear as seções da página](02-mapear-secoes.md) | [x] |
 | 3 | [Identificar os componentes reaproveitáveis](03-componentes-reaproveitaveis.md) | [x] |
 | 4 | [Montar a árvore de componentes](04-arvore-de-componentes.md) | [x] |

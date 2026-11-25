@@ -131,6 +131,15 @@ mkdir -p src/assets/icons src/assets/brand src/layout src/sections src/component
 
 O oxlint já vem no template do Vite (`npm run lint`). O `.oxlintrc.json` foi ajustado para ativar os plugins `jsx-a11y` (acessibilidade) e `vitest`, com a categoria `correctness` como erro. Por que oxlint e não ESLint: [ADR-0011](doc/adr/0011-linter-oxlint.md).
 
+### 8. Fontes e design tokens
+
+```bash
+npm install @fontsource/poppins @fontsource/inter
+```
+
+- `src/main.tsx`: importa só os pesos usados no Figma, no subconjunto latino (Poppins 300, 500, 600 e 700; Inter 500). As fontes são servidas pelo próprio site em WOFF2, sem depender do Google Fonts.
+- `src/index.css`: bloco `@theme` com os tokens do Figma (fontes, cores, sombras e largura do conteúdo) e estilos base (fonte padrão e foco visível amarelo para navegação por teclado).
+
 ## O que faria com mais tempo
 
 *A preencher ao final do projeto.*
