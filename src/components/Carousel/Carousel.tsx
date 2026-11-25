@@ -48,7 +48,7 @@ export function Carousel({
         <ul
           ref={trackRef}
           className={cn(
-            'scrollbar-hidden flex snap-x snap-mandatory overflow-x-auto py-1 motion-safe:scroll-smooth',
+            'relative scrollbar-hidden flex snap-x snap-mandatory overflow-x-auto py-1 motion-safe:scroll-smooth',
             gapClassName,
           )}
         >
