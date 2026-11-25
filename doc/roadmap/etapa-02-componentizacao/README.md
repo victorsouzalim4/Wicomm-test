@@ -20,7 +20,7 @@ Antes de escrever o primeiro componente, quebrar o layout do Figma em **seções
 | 3 | [Identificar os componentes reaproveitáveis](03-componentes-reaproveitaveis.md) | [x] |
 | 4 | [Montar a árvore de componentes](04-arvore-de-componentes.md) | [x] |
 | 5 | [Definir props e tipos](05-props-e-tipos.md) | [x] tipos da API em `src/types/api.ts` e props tipadas em cada componente |
-| 6 | [Ordem de implementação](06-ordem-de-implementacao.md) | Em andamento: base, card, carrossel e vitrines prontos |
+| 6 | [Ordem de implementação](06-ordem-de-implementacao.md) | [x] página completa, carrinho e menus (falta o acabamento) |
 | 7 | [Inventário de imagens](07-inventario-de-imagens.md) | [x] mapeado, exportado e hospedado no Cloudinary |
 
 As partes 2, 3, 4 e 7 já foram feitas a partir do Figma real (frame "AMAKHA - HOME", só desktop, 1280px). A organização das pastas está no [ADR-0009](../../adr/0009-organizacao-layout-sections-components.md).

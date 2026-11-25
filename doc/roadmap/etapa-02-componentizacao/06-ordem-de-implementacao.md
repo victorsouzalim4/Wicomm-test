@@ -7,23 +7,27 @@ Implementar de baixo para cima: primeiro as peças pequenas, depois as seções 
 ## Ordem e andamento
 
 1. **Componentes base**
-   - [x] `Container`, `Icon` (SVGs do Figma via `vite-plugin-svgr`), `Button`, `IconButton`, `SectionTitle`, `Price`, `Tag`, `DiscountBadge`
+   - [x] `Container`, `Icon`, `Button`, `IconButton`, `SectionTitle`, `Price`, `Tag`, `DiscountBadge`, `BannerLink`
 2. **Componentes compostos**
-   - [x] `ProductCard` (hover com "COMPRAR", favoritar, selo e parcelas calculados)
-   - [x] `Carousel` + hook `useCarousel` (scroll-snap, setas, bolinhas)
-   - [ ] `Drawer`, `QuantitySelector` (entram junto com o mini cart)
-3. **Seções**
-   - [x] `ProductShelf` (as 3 vitrines, com esqueleto de carregamento)
-   - [ ] `AnnouncementBar`, `Header`, `HeroBanner`, `OfferCountdown`, `BenefitsBar`, `PromoBannerGrid`, `CategoryBanners`, `ResellerBanners`, `BlogSection`, `CausesSection`, `SocialSection`, `Footer`, `WhatsAppButton`
-4. **Estado do carrinho:** `CartContext`, reducer e testes do reducer
-5. **Interações:** `CartButton` com contador, `MiniCart` abrindo e atualizando, menu mobile, dropdowns
-6. **Acabamento:** revisão de fidelidade com o Figma, transições, navegação pelo teclado
+   - [x] `ProductCard`, `Carousel` (+ `useCarousel`), `Drawer` (sobre o `<dialog>` nativo), `QuantitySelector`
+3. **Seções e layout**
+   - [x] `AnnouncementBar`, `Header` (busca, conta, `CartButton`, `NavItem` com dropdown, `MobileMenu`)
+   - [x] `HeroBanner`, `OfferCountdown` (+ `useCountdown`), `BenefitsBar`, `ProductShelf` ×3
+   - [x] `PromoBannerGrid`, `CategoryBanners`, `ResellerBanners`, `BlogSection`, `CausesSection`, `SocialSection`
+   - [x] `Footer` (+ `NewsletterForm`), `WhatsAppButton`
+4. **Estado do carrinho**
+   - [x] `cartReducer` e `cartStorage` com testes, `CartProvider` com sincronização entre abas, `useCart`
+5. **Interações**
+   - [x] Comprar → mini cart abre e atualiza (quantidade, remover, subtotal, contador no header)
+   - [x] Dropdowns do menu (hover, clique, Esc, clique fora) e menu mobile
+6. **Acabamento**
+   - [ ] Revisão de fidelidade lado a lado com o Figma
+   - [ ] Lighthouse e ajustes de performance
 
-## Conferência visual (25/11/2026)
+## Conferência no navegador (25/11/2026)
 
-As vitrines foram comparadas com o Figma no navegador:
-
-- Cards de 226px com 9px de espaço, sombra, selo, coração, "FRETE GRÁTIS", preço "de/por" e parcelas
-- O hover mostra o "COMPRAR" sobre a parte de baixo da imagem (no Figma ele fica a 180px do topo da área de 210px)
-- O favorito preenche o coração e muda o texto para leitores de tela
-- Em telas estreitas, o carrossel mostra as setas e as bolinhas, avança uma página por clique e desativa as setas nas pontas
+- **Desktop:** a página inteira foi comparada com o Figma, seção por seção
+- **Carrinho:** adicionar abre o mini cart, + e − recalculam o subtotal, o `Esc` fecha e o foco volta ao botão, e recarregar mantém o carrinho
+- **Menu:** o dropdown abre no hover e no clique, e fecha com `Esc`
+- **Celular (390px) e tablet (768px):** sem rolagem horizontal, menu hambúrguer com subcategorias, "COMPRAR" sempre visível
+- **Bug encontrado e corrigido:** os textos `sr-only` dos cards (com `position: absolute`) escapavam do trilho do carrossel e criavam rolagem horizontal no celular

@@ -17,4 +17,4 @@ public/api/*.json  ──fetch──▶  src/services/  ──▶  src/hooks/ (u
 | 1 | [Fechar a decisão](01-decisao.md) | [x] ADR-0010 |
 | 2 | [Criar os JSONs da API mock](02-dados-mockados.md) | [x] 9 endpoints |
 | 3 | [Criar a camada de service](03-camada-de-service.md) | [x] services, hooks, utils e 35 testes |
-| 4 | [Consumir os dados nos componentes](04-consumo-nos-componentes.md) | [ ] |
+| 4 | [Consumir os dados nos componentes](04-consumo-nos-componentes.md) | [x] todas as seções usam os hooks de dados |
