@@ -53,6 +53,6 @@ Os arquivos estão em `figma-export/`, na raiz do projeto. A pasta está no `.gi
 
 - [x] Escolher a plataforma de hospedagem: Cloudinary (ADR-0008)
 - [x] Exportar as imagens de conteúdo do Figma
-- [ ] Subir as imagens no Cloudinary e anotar o *public ID* de cada uma
+- [x] Subir as imagens no Cloudinary. O *public ID* é o nome do arquivo sem extensão, por exemplo `https://res.cloudinary.com/ycsxevam/image/upload/f_auto,q_auto,w_400/produto-athena`
 - [ ] Exportar os SVGs de interface para `src/assets/icons/` e `src/assets/brand/`
 - [ ] Escrever o `alt` de cada imagem de conteúdo (vai junto nos dados). Imagens com texto, como os banners, levam no `alt` o texto que aparece nelas.
