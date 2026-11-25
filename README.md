@@ -56,6 +56,7 @@ Cada decisão está registrada em um ADR (*Architecture Decision Record*) em [`d
 | Padronização de código com ESLint e Prettier | [ADR-0007](doc/adr/0007-eslint-e-prettier.md) |
 | Imagens hospedadas no Cloudinary e referenciadas por URL | [ADR-0008](doc/adr/0008-imagens-hospedadas-externamente.md) |
 | Organização em `layout`, `sections` e `components` | [ADR-0009](doc/adr/0009-organizacao-layout-sections-components.md) |
+| API mock com JSON (`public/api/`), com as URLs das imagens do Cloudinary | [ADR-0010](doc/adr/0010-api-mock-com-json-estatico.md) |
 
 O planejamento do trabalho, etapa por etapa, está em [`doc/roadmap/`](doc/roadmap/roadmap.md).
 

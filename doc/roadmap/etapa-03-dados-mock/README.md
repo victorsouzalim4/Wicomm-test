@@ -1,33 +1,20 @@
-# Etapa 3 — Dados: mock via API ou mock direto?
+# Etapa 3 — Dados: API mock com JSON
 
-## Objetivo
+## Decisão
 
-Decidir de onde vêm os dados da página (produtos, banners, links do menu) e montar essa camada.
+**API mock com arquivos JSON** em `public/api/`, buscados com `fetch` por uma camada de service. Os JSONs trazem as URLs das imagens hospedadas no Cloudinary. Detalhes, alternativas e formato dos dados no [ADR-0010](../../adr/0010-api-mock-com-json-estatico.md).
 
-## As opções
-
-| Opção | Como funciona | Prós | Contras |
-| --- | --- | --- | --- |
-| **A. Mock direto** | Arquivo `src/data/products.ts` importado direto no componente | Simples, tipado, nenhum estado de carregamento | Componente fica preso ao arquivo. Trocar por uma API real obriga a mexer nos componentes. |
-| **B. Mock direto atrás de um service** | O arquivo de dados só é acessado por `src/services/productService.ts`, que devolve uma `Promise` | Componentes não sabem de onde vêm os dados. Trocar por API real é mexer em um arquivo só. Permite mostrar loading. | Um pouco mais de código que a opção A |
-| **C. JSON estático via `fetch`** | `public/api/products.json`, buscado com `fetch` | Requisição HTTP de verdade e aparece na aba Network | Perde a tipagem automática (precisa validar ou fazer cast) |
-| **D. MSW (Mock Service Worker)** | Intercepta requisições `fetch` e responde com dados falsos | O mais próximo de uma API real, muito usado em testes | Dependência a mais e configuração extra para pouco ganho neste teste |
-| **E. json-server** | Servidor local que serve um `db.json` | API REST completa | Não roda na Vercel como site estático. A página publicada quebraria. |
-
-## Recomendação: opção B
-
-- Mantém a simplicidade e a tipagem do mock direto.
-- Mostra separação de responsabilidades, que conta em "Qualidade do código" e rende uma boa conversa na entrevista.
-- Funciona igual no deploy da Vercel.
-- Se der tempo, a opção C pode substituir a B por dentro do service, sem mexer em nenhum componente.
-
-A decisão final vai para o README, na seção de decisões.
+```
+public/api/*.json  ──fetch──▶  src/services/  ──▶  src/hooks/ (useProducts...)  ──▶  sections/  ──props──▶  components/
+       ▲                                                                                                   │
+  URLs do Cloudinary  ◀─────────────────────────── optimizeImage(url, { width }) ◀──────────────────────────┘
+```
 
 ## Partes
 
 | # | Parte | Status |
 | --- | --- | --- |
-| 1 | [Fechar a decisão](01-decisao.md) | [ ] |
-| 2 | [Criar os dados mockados](02-dados-mockados.md) | [ ] |
+| 1 | [Fechar a decisão](01-decisao.md) | [x] ADR-0010 |
+| 2 | [Criar os JSONs da API mock](02-dados-mockados.md) | [ ] |
 | 3 | [Criar a camada de service](03-camada-de-service.md) | [ ] |
 | 4 | [Consumir os dados nos componentes](04-consumo-nos-componentes.md) | [ ] |

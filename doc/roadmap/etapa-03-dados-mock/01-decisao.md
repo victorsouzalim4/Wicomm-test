@@ -1,19 +1,15 @@
 # 3.1 — Fechar a decisão
 
-## Objetivo
+## Decidido
 
-Escolher uma das opções do [README da etapa](README.md) e registrar o porquê.
+API mock com JSON servido pelo próprio site, atrás de uma camada de service: [ADR-0010](../../adr/0010-api-mock-com-json-estatico.md).
 
 ## Passos
 
-- [ ] Escolher a opção (recomendada: **B. mock direto atrás de um service**)
-- [ ] Registrar a escolha e o motivo na seção "Decisões tomadas" do README da raiz
-- [ ] Atualizar o README desta etapa, marcando a opção escolhida
-
-## Pronto quando
-
-A decisão está registrada no README do projeto.
+- [x] Escolher a opção
+- [x] Registrar o ADR
+- [x] Resumir a decisão na seção "Decisões" do README da raiz
 
 ## Commits sugeridos
 
-- `docs: registra decisão sobre mock de dados`
+- `docs: registra decisão da API mock com JSON (ADR-0010)`
