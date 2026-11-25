@@ -4,48 +4,43 @@
 
 Isolar o acesso à API em um só lugar. Os componentes não sabem que os dados vêm de um JSON.
 
-## Rascunho
+## Como ficou
 
-```ts
-// src/services/api.ts
-const API_URL = import.meta.env.VITE_API_URL ?? '/api';
-
-export async function fetchJson<T>(path: string, validate: (data: unknown) => data is T): Promise<T> {
-  const response = await fetch(`${API_URL}/${path}`);
-  if (!response.ok) throw new Error(`Erro ${response.status} ao buscar ${path}`);
-  const data: unknown = await response.json();
-  if (!validate(data)) throw new Error(`Formato inválido em ${path}`);
-  return data;
-}
-
-// src/services/productService.ts
-export const getProducts = () => fetchJson('products.json', isProductList);
+```
+storeService.getProducts()  ──▶  api.getJson()  ──cache──▶  api.fetchJson()  ──fetch──▶  /api/products.json
+                                                                   │
+                                                     validators.isProductsResponse()
 ```
 
-```ts
-// src/utils/optimizeImage.ts — insere as transformações do Cloudinary na URL vinda da API
-export function optimizeImage(url: string, { width }: { width: number }) {
-  return url.replace('/upload/', `/upload/f_auto,q_auto,w_${width}/`);
-}
-```
+| Arquivo | Responsabilidade |
+| --- | --- |
+| `src/services/api.ts` | `fetchJson`: chama o endpoint, trata erro HTTP, erro de rede e JSON inválido, e valida o formato. `getJson`: guarda a requisição de cada endpoint (as 3 vitrines pedem `products.json`, e a rede é chamada uma vez só). Se a requisição falhar, ela sai do cache. Atraso de 300ms só em desenvolvimento. |
+| `src/services/validators.ts` | Um validador por resposta, montados com `hasShape<T>()`. O molde exige todos os campos do tipo: esquecer um campo é **erro de compilação** (testado: sem `height`, o `tsc` acusa TS2741). |
+| `src/services/storeService.ts` | Uma função por recurso (`getProducts`, `getBanners`...). É o único arquivo que conhece os nomes dos endpoints. |
+| `src/hooks/useApi.ts` | Liga uma função de serviço à interface: `{ data, isLoading, error }`. Ignora a resposta se o componente já saiu da tela. |
+| `src/hooks/useStoreData.ts` | Um hook por recurso (`useProducts`, `useBanners`...), usados pelas seções |
+| `src/utils/image.ts` | `optimizeImage(url, { width })` e `buildSrcSet(url, larguras)`: transformações do Cloudinary na URL vinda da API |
+| `src/utils/price.ts` | `formatPrice`, `installmentValue` e `discountPercent`: os valores derivados do preço |
+| `src/vite-env.d.ts` e `.env.example` | Tipagem e exemplo da variável `VITE_API_URL` (padrão `/api`) |
 
 ## Passos
 
-- [ ] `src/services/api.ts` com `fetchJson` (erro HTTP + validação)
-- [ ] Um service por recurso (`productService`, `bannerService`...), com as funções de validação (type guards) em `src/services/validators.ts`
-- [ ] Simular um pequeno atraso (~300ms) só em desenvolvimento, para o estado de carregamento aparecer como numa API real
-- [ ] Hooks em `src/hooks/` (`useProducts`, `useBanners`...) que devolvem `{ data, isLoading, error }`
-- [ ] `optimizeImage` em `src/utils/`, usado para montar `src` e `srcset`
-- [ ] `VITE_API_URL` documentada no `.env.example`
-- [ ] Testes: `fetchJson` (sucesso, erro HTTP, JSON inválido), `optimizeImage` e um hook
+- [x] `fetchJson` com erro HTTP, erro de rede, JSON inválido e validação
+- [x] Cache por endpoint, com nova tentativa depois de falha
+- [x] Validadores para os 9 endpoints
+- [x] Serviços e hooks por recurso
+- [x] Atraso simulado em desenvolvimento
+- [x] `optimizeImage` e `buildSrcSet`
+- [x] Utilitários de preço (parcelas e desconto calculados)
+- [x] `VITE_API_URL` tipada e documentada no `.env.example`
+- [x] Testes: 35 casos novos (cliente da API, cache, validadores com os JSONs reais e com dados inválidos, hook, preço e imagem)
 
 ## Pronto quando
 
 Nenhum componente chama `fetch` nem conhece `/api`: tudo passa pelos services e hooks.
 
-## Commits sugeridos
+## Commits
 
-- `feat: adiciona cliente da API mock com validação`
-- `feat: adiciona services e hooks de dados`
-- `feat: adiciona helper de otimização de imagens do Cloudinary`
-- `test: testa cliente da API e helper de imagens`
+- `feat: adiciona cliente da API mock com validação e cache`
+- `feat: adiciona hooks de dados`
+- `feat: adiciona utilitários de preço e de imagem`

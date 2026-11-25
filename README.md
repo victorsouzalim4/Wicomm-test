@@ -23,6 +23,8 @@ npm install
 npm run dev
 ```
 
+Não é preciso configurar nada: os dados vêm da API mock em `public/api/`. Para apontar para outra API, copie o `.env.example` para `.env` e altere o `VITE_API_URL`.
+
 ### Scripts disponíveis
 
 | Comando | O que faz |
@@ -165,6 +167,13 @@ Os ícones do layout são do pacote Vuesax/Iconsax, não do Lucide. Os 12 ícone
 ### 10. API mock
 
 Os dados da página ficam em `public/api/*.json` (formato em `src/types/api.ts`), com as URLs das imagens no Cloudinary. Não precisa de nenhum comando: o Vite serve a pasta `public/` em desenvolvimento e a copia para `dist/` no build. Motivo: [ADR-0010](doc/adr/0010-api-mock-com-json-estatico.md).
+
+### 11. Camada de dados
+
+Sem dependências novas. O fluxo é `componente → hook (src/hooks) → serviço (src/services) → fetch → /api/*.json`, com validação do formato de cada resposta e cache por endpoint. Os utilitários `optimizeImage` (Cloudinary) e `formatPrice`/`installmentValue`/`discountPercent` ficam em `src/utils/`. Detalhes na [parte 3.3 do roadmap](doc/roadmap/etapa-03-dados-mock/03-camada-de-service.md).
+
+- `tsconfig.app.json`: `resolveJsonModule: true`, para os testes importarem os JSONs reais da API mock e conferirem o formato deles
+- `.env.example`: documenta a variável `VITE_API_URL`
 
 ## O que faria com mais tempo
 
