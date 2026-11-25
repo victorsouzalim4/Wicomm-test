@@ -12,16 +12,11 @@
 | Testes | Vitest + Testing Library | [ADR-0003](../../adr/0003-typescript-vite-vitest-vercel.md) |
 | Deploy | Vercel | [ADR-0003](../../adr/0003-typescript-vite-vitest-vercel.md) |
 | Ícones | Lucide (`lucide-react`), com SVG do Figma para marcas e ícones sem equivalente fiel | [ADR-0004](../../adr/0004-icones-lucide.md) |
+| Carrossel | Componente `Carousel` genérico feito por nós, com scroll-snap | [ADR-0005](../../adr/0005-carrossel-generico-proprio.md) |
+| Estado do carrinho | Context + `useReducer`, salvo no `localStorage` | [ADR-0006](../../adr/0006-estado-do-carrinho.md) |
+| Qualidade | ESLint + Prettier (com `prettier-plugin-tailwindcss`) | [ADR-0007](../../adr/0007-eslint-e-prettier.md) |
 
-## Em discussão
-
-| Camada | Proposta | Por quê |
-| --- | --- | --- |
-| Estado do carrinho | Context API + `useReducer` | Basta para um carrinho e não adiciona dependências. Os dados ficam salvos no `localStorage`. |
-| Carrossel | Componente próprio com o scroll-snap do Tailwind (`snap-x`, `snap-mandatory`, `snap-start`) e pouco JS para setas e bolinhas | O Tailwind não tem carrossel pronto. O scroll-snap dá o arraste com o dedo de graça, e o resto fica sob nosso controle (acessibilidade, itens por tela). |
-| Qualidade | ESLint + Prettier (com `prettier-plugin-tailwindcss`) | Código padronizado e classes do Tailwind sempre na mesma ordem |
-
-Cada item aceito vira um ADR em [`doc/adr/`](../../adr/README.md) e sobe para a tabela "Decidido".
+Todas as decisões de stack estão fechadas. Falta executar as partes abaixo.
 
 ### Fora de escopo (vetado pelo teste)
 
