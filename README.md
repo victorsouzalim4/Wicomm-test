@@ -72,7 +72,12 @@ Pontos em que o Figma não é claro ou tem inconsistências, e o que foi decidid
 | No Figma | Decisão | Por quê |
 | --- | --- | --- |
 | O card mostra "R$ 255" e "12x R$ 18,75 sem juros", mas 12 × 18,75 = R$ 225 | As parcelas são **calculadas a partir do preço**: 12x de R$ 21,25. O JSON guarda só o preço e o número de parcelas. | Um valor calculado nunca fica inconsistente com o preço, mesmo quando o preço muda |
-| Só o primeiro card de cada vitrine mostra o botão "COMPRAR" e as tags de cupom | É o **estado de hover** do card. No celular, onde não existe hover, o botão fica sempre visível. | É o padrão de vitrines de e-commerce, e o Figma mostra um card "ativo" ao lado de outros "em repouso" |
+| Só o primeiro card de cada vitrine mostra o botão "COMPRAR" | É o **estado de hover** do card. No celular, onde não existe hover, o botão fica sempre visível. | É o padrão de vitrines de e-commerce, e o Figma mostra um card "ativo" ao lado de outros "em repouso" |
+| As tags "Cupom com 15% off" e "Dia do Consumidor" aparecem só no primeiro card | As tags são **dados do produto** (`tags` no JSON): só o Athena tem, e elas aparecem sempre | Tag de cupom é informação do produto, não um efeito visual |
+| O selo diz "10%", mas R$ 320 → R$ 255 é 20% de desconto | O percentual do selo é **calculado a partir dos preços** ("-20%") | Mesmo princípio das parcelas: valores derivados não podem contradizer os preços |
+| Os 5 cards têm o mesmo nome ("Perfume Feminino Athena...") com fotos de perfumes diferentes | Cada produto recebeu o nome da foto (Athena, Fortune, RB, DB Romântica, Chic Woman) | Nome e foto que não batem confundiriam o carrinho |
+| A barra de avisos diz frete grátis acima de R$ 199,90, a barra de vantagens diz R$ 149,90. O card parcela em 12x, as vantagens dizem "até 6x" | Os textos foram mantidos como no Figma (estão no `campaign.json`, fáceis de corrigir) | São textos de campanha, não regras de cálculo. Fica registrado como inconsistência do layout. |
+| Os dropdowns do menu não aparecem no Figma (só o da Revenda, oculto) | Subcategorias de exemplo no `navigation.json`. A Revenda usa os links da coluna "Representante" do footer. | O layout indica que o menu tem dropdowns, mas não mostra o conteúdo |
 
 ## Histórico de configuração
 

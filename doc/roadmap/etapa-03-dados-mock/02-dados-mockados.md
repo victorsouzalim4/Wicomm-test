@@ -6,25 +6,33 @@ Reproduzir em `public/api/*.json` todo o conteúdo do Figma, com as URLs das ima
 
 ## Passos
 
-- [ ] `products.json`: os 5 perfumes (Athena, Fortune, RB, DB, Chic) com nome, preço, preço "de", parcelas, tags ("FRETE GRÁTIS", cupom) e imagem
-- [ ] `shelves.json`: as 3 vitrines com título e ids dos produtos, na ordem do Figma
-- [ ] `banners.json`: `hero` (1), `launches` (3), `haircare` (4), `reseller` (2), cada um com imagem e link
-- [ ] `blog.json`, `causes.json`, `social.json`
-- [ ] `navigation.json`: Perfumaria, Cabelos, Corpo e Banho, Rosto, Nutricional (com subitens), Revenda (dropdown "Consultor") e Promoções
-- [ ] `footer.json`: colunas de links, telefone, e-mail, endereços, redes sociais e formas de pagamento
-- [ ] Toda imagem com `url`, `alt`, `width` e `height` (formato no ADR-0010)
-- [ ] Preços em centavos
+- [x] `src/types/api.ts`: o formato de cada endpoint, que serve de contrato entre os JSONs e o front
+- [x] `products.json`: os 5 perfumes, com nome, preço, preço "de", número de parcelas, frete grátis, tags e imagem
+- [x] `shelves.json`: as 3 vitrines com título e ids dos produtos, na ordem do Figma
+- [x] `banners.json`: `hero` (1), `launches` (3), `haircare` (4) e `reseller` (2), cada um com imagem e link
+- [x] `campaign.json`: barra de avisos, ofertas limitadas (com a data de fim do contador) e os 4 itens da barra de vantagens. Não estava na lista original do ADR-0010, mas é conteúdo de campanha que muda com frequência.
+- [x] `blog.json`, `causes.json` e `social.json`
+- [x] `navigation.json`: Perfumaria, Cabelos, Corpo e Banho, Rosto e Nutricional (com subcategorias de exemplo), Revenda (variante `reseller`, com dropdown) e Promoções (variante `promo`)
+- [x] `footer.json`: newsletter, texto institucional, colunas de links, contato, endereços, redes sociais, selo e formas de pagamento
+- [x] Toda imagem com `url`, `alt`, `width` e `height` (as dimensões vêm do cabeçalho dos PNGs originais)
+- [x] Preços em centavos
 
-## Atenção: inconsistência no Figma
+## Verificação (25/11/2026)
 
-Os cards mostram "R$ 255" e "12x R$ 18,75 sem juros", mas 12 × 18,75 = R$ 225. Decidir qual valor vale (sugestão: calcular as parcelas a partir do preço, `255 / 12 = R$ 21,25`) e registrar no README.
+- Os 9 JSONs são válidos, e as vitrines só apontam para produtos que existem
+- As 25 URLs de imagem respondem 200 no Cloudinary
+- `npm run dev` serve `/api/products.json` como `application/json`, e o `npm run build` copia `public/api/` para `dist/api/`
 
-## Pronto quando
+## Decisões
 
-Cada `/api/*.json` abre no navegador com `npm run dev`, e todas as URLs de imagem respondem 200.
+As inconsistências do Figma (parcelas, percentual do selo, nomes dos produtos, textos de frete e parcelamento) foram resolvidas e registradas no README, na seção "Interpretações do layout".
 
-## Commits sugeridos
+## Limitações conhecidas
 
-- `feat: adiciona API mock de produtos e vitrines`
-- `feat: adiciona API mock de banners, blog, causas e redes sociais`
-- `feat: adiciona API mock de navegação e footer`
+- **As fotos de produto no Figma têm 184×184px**, menores que a área de 210px do card. Em telas de alta densidade podem ficar levemente borradas.
+- **Só há 5 produtos**, então as vitrines repetem os mesmos 5. No desktop cabem os 5 cards, e o carrossel só rola em telas menores.
+- **O banner principal tem um único slide.** O carrossel continua pronto para receber mais slides pelo JSON.
+
+## Commits
+
+- `feat: adiciona tipos e JSONs da API mock`
