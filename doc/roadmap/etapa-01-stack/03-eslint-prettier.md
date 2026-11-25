@@ -1,27 +1,23 @@
-# 1.3 — Configurar ESLint e Prettier
+# 1.3 — Configurar linter e Prettier
+
+> O nome do arquivo ficou do plano original (ESLint). O linter escolhido foi o **oxlint**: veja o [ADR-0011](../../adr/0011-linter-oxlint.md).
 
 ## Objetivo
 
-Padronizar o código e pegar erros e sobras automaticamente.
+Padronizar o código e pegar erros, sobras e problemas de acessibilidade automaticamente.
 
 ## Passos
 
-- [ ] Conferir o ESLint que já vem no template do Vite (`eslint.config.js`)
-- [ ] Rodar `npm install -D prettier eslint-config-prettier prettier-plugin-tailwindcss`
-- [ ] Adicionar `prettier-plugin-tailwindcss` em `plugins` no `.prettierrc`. Ele ordena as classes do Tailwind sozinho.
-- [ ] Adicionar `eslint-config-prettier` no fim do `eslint.config.js`, para o ESLint não brigar com o Prettier
-- [ ] Criar `.prettierrc` com o padrão do projeto. Sugestão: `singleQuote: true`, `semi: true`, `trailingComma: "all"`, `printWidth: 100`
-- [ ] Criar `.prettierignore` (`dist`, `node_modules`, `doc/*.pdf`)
-- [ ] Adicionar os scripts no `package.json`:
-  - `"lint": "eslint ."`
-  - `"format": "prettier --write ."`
-- [ ] Opcional: adicionar o plugin `eslint-plugin-jsx-a11y`, que aponta problemas de acessibilidade no JSX
+- [x] Prettier + `prettier-plugin-tailwindcss`, com `.prettierrc` e `.prettierignore`
+- [x] Scripts `format` e `format:check`
+- [x] oxlint (já veio no template) com os plugins `react`, `typescript`, `oxc`, `jsx-a11y` e `vitest` no `.oxlintrc.json`
+- [x] Validar que as regras de acessibilidade funcionam (testado com imagem sem `alt`, link inválido e `div` clicável)
 
 ## Pronto quando
 
-`npm run lint` e `npm run format` rodam sem erros.
+`npm run lint` e `npm run format:check` passam sem erros.
 
-## Commits sugeridos
+## Commits
 
-- `chore: configura Prettier integrado ao ESLint`
-- `chore: adiciona regras de acessibilidade no ESLint` (se fizer a parte opcional)
+- `chore: configura Prettier com ordenação de classes do Tailwind`
+- `chore: ativa regras de acessibilidade e de testes no oxlint`

@@ -1,6 +1,6 @@
 # ADR-0007 — Padronização de código com ESLint e Prettier
 
-- **Status:** Aceito
+- **Status:** Substituído pelo [ADR-0011](0011-linter-oxlint.md) na parte do linter (o Prettier continua valendo)
 - **Data:** 25/11/2026
 - **Etapa do roadmap:** [Etapa 1 — Definir a stack](../roadmap/etapa-01-stack/README.md)
 

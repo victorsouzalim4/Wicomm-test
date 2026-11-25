@@ -30,7 +30,7 @@ npm run dev
 | `npm run dev` | Sobe o servidor de desenvolvimento com recarregamento automático |
 | `npm run build` | Verifica os tipos (TypeScript) e gera a versão de produção em `dist/` |
 | `npm run preview` | Serve localmente a versão de produção gerada pelo `build` |
-| `npm run lint` | Procura problemas no código |
+| `npm run lint` | Procura problemas no código, inclusive de acessibilidade (oxlint) |
 | `npm test` | Roda os testes em modo observação (Vitest) |
 | `npm run test:run` | Roda os testes uma vez (para CI) |
 | `npm run format` | Formata o código com o Prettier (e ordena as classes do Tailwind) |
@@ -57,7 +57,8 @@ Cada decisão está registrada em um ADR (*Architecture Decision Record*) em [`d
 | Ícones com Lucide | [ADR-0004](doc/adr/0004-icones-lucide.md) |
 | Carrossel genérico feito à mão | [ADR-0005](doc/adr/0005-carrossel-generico-proprio.md) |
 | Estado do carrinho com Context, `useReducer` e `localStorage` | [ADR-0006](doc/adr/0006-estado-do-carrinho.md) |
-| Padronização de código com ESLint e Prettier | [ADR-0007](doc/adr/0007-eslint-e-prettier.md) |
+| Prettier para formatação (o linter do ADR-0007 foi substituído) | [ADR-0007](doc/adr/0007-eslint-e-prettier.md) |
+| Linter: oxlint, com regras de acessibilidade (`jsx-a11y`) | [ADR-0011](doc/adr/0011-linter-oxlint.md) |
 | Imagens hospedadas no Cloudinary e referenciadas por URL | [ADR-0008](doc/adr/0008-imagens-hospedadas-externamente.md) |
 | Organização em `layout`, `sections` e `components` | [ADR-0009](doc/adr/0009-organizacao-layout-sections-components.md) |
 | API mock com JSON (`public/api/`), com as URLs das imagens do Cloudinary | [ADR-0010](doc/adr/0010-api-mock-com-json-estatico.md) |
@@ -125,6 +126,10 @@ mkdir -p src/assets/icons src/assets/brand src/layout src/sections src/component
 
 - Organização definida no [ADR-0009](doc/adr/0009-organizacao-layout-sections-components.md). As pastas vazias têm um `.gitkeep` até receber arquivos.
 - Alias `@/` → `src/`, configurado em `vite.config.ts` (`resolve.alias`) e em `tsconfig.app.json` (`paths`). Exemplo: `import App from '@/App'`.
+
+### 7. Linter (oxlint)
+
+O oxlint já vem no template do Vite (`npm run lint`). O `.oxlintrc.json` foi ajustado para ativar os plugins `jsx-a11y` (acessibilidade) e `vitest`, com a categoria `correctness` como erro. Por que oxlint e não ESLint: [ADR-0011](doc/adr/0011-linter-oxlint.md).
 
 ## O que faria com mais tempo
 

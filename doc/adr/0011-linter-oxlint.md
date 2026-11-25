@@ -1,6 +1,6 @@
 # ADR-0011 — Linter: oxlint no lugar do ESLint
 
-- **Status:** Proposto (substituiria o [ADR-0007](0007-eslint-e-prettier.md) na parte do linter. O Prettier continua.)
+- **Status:** Aceito (substitui o [ADR-0007](0007-eslint-e-prettier.md) na parte do linter. O Prettier continua.)
 - **Data:** 25/11/2026
 - **Etapa do roadmap:** [Etapa 1 — Definir a stack](../roadmap/etapa-01-stack/README.md)
 
@@ -20,9 +20,11 @@ Ou seja: para usar ESLint, precisaríamos voltar o TypeScript para a versão 5.x
 | ESLint + voltar o TypeScript para 6.0 | Ferramenta mais conhecida, maior ecossistema de plugins | Abre mão do TypeScript 7 (checagem de tipos bem mais rápida) e briga com o template oficial |
 | **oxlint (já instalado) + Prettier** | Já vem no template. Muito mais rápido. Tem as regras de React, React Hooks, TypeScript e **36 regras de `jsx-a11y`** embutidas, sem plugins para instalar. | Menos regras que o ecossistema completo do ESLint. Plugins de terceiros são mais limitados. |
 
-## Decisão (proposta)
+## Decisão
 
-Manter o **oxlint** como linter, ativando os plugins `react`, `typescript`, `oxc` e **`jsx-a11y`**, e o **Prettier** para a formatação.
+Manter o **oxlint** como linter, com os plugins `react`, `typescript`, `oxc`, **`jsx-a11y`** e `vitest` (categoria `correctness` como erro, `suspicious` como aviso), e o **Prettier** para a formatação.
+
+Validado com um arquivo de teste: o oxlint acusou imagem sem `alt`, link com `href="#"`, `div` clicável sem evento de teclado e `div` clicável sem `role`.
 
 ## Consequências
 

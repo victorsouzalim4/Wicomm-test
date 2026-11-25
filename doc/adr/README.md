@@ -26,8 +26,8 @@ Um **ADR** (*Architecture Decision Record*) é um documento curto que registra u
 | [0004](0004-icones-lucide.md) | Ícones com Lucide | Aceito | 25/11/2026 |
 | [0005](0005-carrossel-generico-proprio.md) | Carrossel genérico feito à mão | Aceito | 25/11/2026 |
 | [0006](0006-estado-do-carrinho.md) | Estado do carrinho com Context, `useReducer` e `localStorage` | Aceito | 25/11/2026 |
-| [0007](0007-eslint-e-prettier.md) | Padronização de código com ESLint e Prettier | Aceito | 25/11/2026 |
+| [0007](0007-eslint-e-prettier.md) | Padronização de código com ESLint e Prettier | Substituído pelo 0011 (linter) | 25/11/2026 |
 | [0008](0008-imagens-hospedadas-externamente.md) | Imagens hospedadas fora do projeto e referenciadas por URL (Cloudinary) | Aceito | 25/11/2026 |
 | [0009](0009-organizacao-layout-sections-components.md) | Organização em `layout`, `sections` e `components` | Aceito | 25/11/2026 |
 | [0010](0010-api-mock-com-json-estatico.md) | API mock com arquivos JSON servidos pelo próprio site | Aceito | 25/11/2026 |
-| [0011](0011-linter-oxlint.md) | Linter: oxlint no lugar do ESLint | Proposto | 25/11/2026 |
+| [0011](0011-linter-oxlint.md) | Linter: oxlint no lugar do ESLint | Aceito | 25/11/2026 |
