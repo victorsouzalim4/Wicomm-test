@@ -65,6 +65,15 @@ Cada decisão está registrada em um ADR (*Architecture Decision Record*) em [`d
 
 O planejamento do trabalho, etapa por etapa, está em [`doc/roadmap/`](doc/roadmap/roadmap.md).
 
+### Interpretações do layout
+
+Pontos em que o Figma não é claro ou tem inconsistências, e o que foi decidido:
+
+| No Figma | Decisão | Por quê |
+| --- | --- | --- |
+| O card mostra "R$ 255" e "12x R$ 18,75 sem juros", mas 12 × 18,75 = R$ 225 | As parcelas são **calculadas a partir do preço**: 12x de R$ 21,25. O JSON guarda só o preço e o número de parcelas. | Um valor calculado nunca fica inconsistente com o preço, mesmo quando o preço muda |
+| Só o primeiro card de cada vitrine mostra o botão "COMPRAR" e as tags de cupom | É o **estado de hover** do card. No celular, onde não existe hover, o botão fica sempre visível. | É o padrão de vitrines de e-commerce, e o Figma mostra um card "ativo" ao lado de outros "em repouso" |
+
 ## Histórico de configuração
 
 Todos os comandos usados para montar o projeto, na ordem em que foram rodados. Não é preciso repetir nada disto para rodar o projeto: basta o `npm install` do passo a passo acima.
