@@ -22,3 +22,6 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Imagens originais exportadas do Figma (hospedadas no Cloudinary, ver ADR-0008)
+figma-export/

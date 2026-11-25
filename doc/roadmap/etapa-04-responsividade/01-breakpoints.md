@@ -16,14 +16,14 @@ Fechar os pontos em que o layout muda e deixar isso num mixin único.
 ## Passos
 
 - [ ] Conferir as larguras dos frames do Figma e ajustar a tabela
-- [ ] Escrever os breakpoints e o mixin `respond-to` em `src/styles/_breakpoints.scss`
-- [ ] Nunca escrever `@media` com número solto nos componentes: sempre usar o mixin
+- [ ] Escrever os breakpoints no `@theme` do `src/index.css` (`--breakpoint-md`, `--breakpoint-lg`...)
+- [ ] Nunca escrever `@media` com número solto nos componentes: sempre usar os prefixos do Tailwind (`md:`, `lg:`)
 - [ ] Registrar no README quais telas existiam no Figma e quais foram decisão nossa
 
 ## Pronto quando
 
-Os breakpoints estão no código e todos os componentes usam o mixin.
+Os breakpoints estão no `@theme` e todos os componentes usam os prefixos do Tailwind.
 
 ## Commits sugeridos
 
-- `style: define breakpoints e mixin respond-to`
+- `style: define breakpoints no tema do Tailwind`

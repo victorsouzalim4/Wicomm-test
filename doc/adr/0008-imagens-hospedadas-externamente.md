@@ -1,6 +1,6 @@
 # ADR-0008 — Imagens hospedadas fora do projeto e referenciadas por URL
 
-- **Status:** Proposto (a abordagem está decidida; falta confirmar a plataforma)
+- **Status:** Aceito (plataforma: Cloudinary)
 - **Data:** 25/11/2026
 - **Etapa do roadmap:** [Etapa 2 — Definir a componentização](../roadmap/etapa-02-componentizacao/README.md)
 
@@ -22,7 +22,9 @@ O teste também avalia "Performance": imagens otimizadas e página carregando r�
 
 Hospedar **todas as imagens de conteúdo** (banners, produtos, categorias) numa plataforma externa e referenciá-las **por URL nos dados** (mocks/service, ver etapa 3), nunca direto no componente.
 
-### Plataforma (a confirmar)
+### Plataforma: Cloudinary
+
+Escolhido pelo plano gratuito (25 créditos/mês, sem cartão), pela otimização feita pela própria URL e por ser o mais documentado.
 
 | Plataforma | Plano gratuito | Otimização pela URL |
 | --- | --- | --- |
@@ -34,7 +36,7 @@ Hospedar **todas as imagens de conteúdo** (banners, produtos, categorias) numa 
 
 - **Componentes não conhecem URLs:** recebem a imagem por props (`{ src, alt }`), vinda dos dados.
 - **Um helper monta as URLs:** um `buildImageUrl(id, { width })` em `src/utils/` gera a URL da plataforma. Isso facilita gerar o `srcset` com vários tamanhos para as imagens responsivas, e trocar de plataforma vira uma mudança num arquivo só.
-- **Endereço base em variável de ambiente:** `VITE_IMAGES_BASE_URL` no `.env`, com um `.env.example` no repositório.
+- **Conta em variável de ambiente:** `VITE_CLOUDINARY_CLOUD_NAME` no `.env`, com um `.env.example` no repositório. O passo a passo está na [parte 5.2](../roadmap/etapa-05-deploy/02-imagens-cloudinary.md).
 - **Inventário de imagens:** a etapa 2 registra cada imagem do Figma, com o componente ao qual pertence e de onde ela é chamada.
 - **Ficam no projeto:** logo e ícones (SVG). São parte da identidade da interface, não conteúdo, e ficam mais rápidos embutidos no bundle.
 - **Pré-conexão:** adicionar `<link rel="preconnect">` para o domínio da plataforma no `index.html`, para a primeira imagem carregar mais rápido.

@@ -12,6 +12,9 @@ Fazer a página se adaptar bem também entre os breakpoints, e não só neles.
 - [ ] Evitar larguras e alturas fixas em px. Preferir `%`, `rem`, `min()`, `max()` e `aspect-ratio`.
 - [ ] Conferir se nada causa rolagem horizontal em 320px de largura
 - [ ] Áreas clicáveis com pelo menos 44×44px no celular
+- [ ] Blocos lado a lado no desktop (banners do consultor, cards do blog e das causas) ficam **empilhados** no celular
+- [ ] Footer: no celular, as colunas de links viram **acordeão** com `<details>`/`<summary>`, que já é acessível sem JavaScript
+- [ ] Inputs (busca, newsletter) com fonte de pelo menos 16px no celular, para o iOS não dar zoom automático ao focar
 
 ## Pronto quando
 

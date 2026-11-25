@@ -19,6 +19,7 @@ export async function getProducts(): Promise<Product[]> {
 ## Passos
 
 - [ ] Criar `src/services/` com um service por tipo de dado (produtos, banners, navegação)
+- [ ] Simular um pequeno atraso (por exemplo, 300ms) no service, para o estado de carregamento aparecer como numa API real
 - [ ] Criar o hook `useProducts()` em `src/hooks/`, que chama o service e devolve `{ data, isLoading, error }`
 - [ ] Escrever um teste do service e do hook
 

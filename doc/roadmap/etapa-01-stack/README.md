@@ -32,4 +32,4 @@ Vue, Angular, Svelte, Bootstrap e qualquer outro framework de UI ou CSS. Sass e 
 | 4 | [Configurar Vitest e Testing Library](04-vitest-testing-library.md) | [ ] |
 | 5 | [Definir a estrutura de pastas](05-estrutura-de-pastas.md) | [ ] |
 | 6 | [Criar o README inicial](06-readme-inicial.md) | [ ] |
-| 7 | [Fazer o primeiro deploy na Vercel](07-deploy-vercel.md) | [ ] |
+| 7 | Primeiro deploy na Vercel: movido para a [etapa 5](../etapa-05-deploy/01-deploy-vercel.md), mas deve ser feito logo depois desta etapa | — |

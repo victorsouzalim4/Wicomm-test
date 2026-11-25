@@ -35,9 +35,24 @@ Cada imagem do Figma, com o componente ao qual pertence e de onde ela é chamada
 | Bandeiras de pagamento (Amex, Diners, Visa, Master, Elo, Pix, Boleto) | `Footer` → `PaymentMethods` | Exportar do Figma |
 | Logos Wicomm e VTEX | `Footer` | Exportar do Figma |
 
+## Exportação (feita em 25/11/2026)
+
+Os arquivos estão em `figma-export/`, na raiz do projeto. A pasta está no `.gitignore`: as imagens de conteúdo vão para o Cloudinary, e os SVGs de interface vão para `src/assets/` quando forem usados.
+
+- **Imagens de conteúdo (26 PNGs, arquivo original do Figma, sem recompressão):** `hero-*`, `produto-*` (5), `lancamento-*` (3), `cronograma-*` (4), `consultor-*` (2), `blog-*` (3), `causa-*` (3), `social-*` (3), `footer-selo-qualidade`
+- **SVGs:** `logo-amakha.svg` (header), `logo-amakha-coroa.svg` (footer), `logo-wicomm.svg`, `logo-vtex.svg`, `pagamento/` (7 bandeiras), `icones/` (Facebook, Instagram, YouTube, WhatsApp)
+
+### O que a exportação revelou
+
+- **Os botões "APROVEITE" e "COMPRE" fazem parte da imagem** nos banners de lançamentos e do cronograma capilar. Então o banner inteiro é o link (`BannerLink`), e o `alt` repete o texto da imagem.
+- **O fundo da newsletter não é imagem:** são formas com degradê (`#D9D9D9` → `#737373`) sobre fundo preto. Vai ser feito em CSS.
+- **Os ícones de interface do Figma são do pacote Vuesax/Iconsax** (`search-normal`, `profile-circle`, `people`, `discount-shape`...), não do Lucide. Isso afeta o [ADR-0004](../../adr/0004-icones-lucide.md) (decisão pendente).
+- **Os itens da barra de vantagens são vetores com o texto convertido em curvas.** O texto vai ser HTML (acessível), e só os ícones circulares viram SVG. Por enquanto só o ícone do PIX foi exportado limpo (`icones/vantagem-pix-rascunho.svg`). Os outros três dependem da decisão sobre os ícones.
+
 ## Próximos passos
 
-- [ ] Escolher a plataforma de hospedagem (fecha o ADR-0008)
-- [ ] Exportar as imagens de conteúdo do Figma em 2x, subir na plataforma e anotar o identificador de cada uma
+- [x] Escolher a plataforma de hospedagem: Cloudinary (ADR-0008)
+- [x] Exportar as imagens de conteúdo do Figma
+- [ ] Subir as imagens no Cloudinary e anotar o *public ID* de cada uma
 - [ ] Exportar os SVGs de interface para `src/assets/icons/` e `src/assets/brand/`
 - [ ] Escrever o `alt` de cada imagem de conteúdo (vai junto nos dados). Imagens com texto, como os banners, levam no `alt` o texto que aparece nelas.

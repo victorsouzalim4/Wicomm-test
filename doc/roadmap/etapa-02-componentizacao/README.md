@@ -21,6 +21,6 @@ Antes de escrever o primeiro componente, quebrar o layout do Figma em **seções
 | 4 | [Montar a árvore de componentes](04-arvore-de-componentes.md) | [x] |
 | 5 | [Definir props e tipos](05-props-e-tipos.md) | [ ] |
 | 6 | [Definir a ordem de implementação](06-ordem-de-implementacao.md) | [ ] |
-| 7 | [Inventário de imagens](07-inventario-de-imagens.md) | [x] mapeado (falta exportar) |
+| 7 | [Inventário de imagens](07-inventario-de-imagens.md) | [x] mapeado e exportado (falta subir no Cloudinary) |
 
 As partes 2, 3, 4 e 7 já foram feitas a partir do Figma real (frame "AMAKHA - HOME", só desktop, 1280px). A organização das pastas está no [ADR-0009](../../adr/0009-organizacao-layout-sections-components.md).
