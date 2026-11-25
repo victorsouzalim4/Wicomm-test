@@ -10,10 +10,16 @@
   --font-badge: 'Inter', ui-sans-serif, system-ui, sans-serif; /* só no selo de desconto */
 
   /* Tamanhos de texto: o Figma usa altura de linha de 131% em todos os textos */
+  --text-micro: 0.625rem; /* 10px: etiqueta da barra de avisos, contador do carrinho, legendas do contador */
+  --text-micro--line-height: 1.31;
   --text-caption: 0.8125rem; /* 13px: preço "de", tags e selo */
   --text-caption--line-height: 1.31;
   --text-sm--line-height: 1.31; /* 14px: nome, preço, parcelas */
   --text-xl--line-height: 1.31; /* 20px: títulos de seção */
+  --text-countdown-number: 1.855rem; /* 29.68px: números do contador */
+  --text-countdown-number--line-height: 1;
+  --text-offer: 2rem; /* 32px: "Ofertas limitadas" */
+  --text-offer--line-height: 1;
 
   /* Espaçamento entre letras */
   --tracking-button: -0.04em; /* "COMPRAR" e tags */
@@ -27,11 +33,17 @@
   --color-surface-100: #f0f0f0; /* ofertas limitadas */
   --color-surface-200: #eeeeee; /* nossas causas e footer */
   --color-dot: #d9d9d9; /* bolinhas inativas do carrossel */
+  --color-countdown: #595959; /* textos do contador (Gray-8) */
+
+  /* Raios */
+  --radius-field: 5px; /* busca e botão "Minha conta" */
 
   /* Sombras */
   --shadow-header: 0 1px 2px 0 rgb(0 0 0 / 0.25);
   --shadow-card: 0 0 4px 0 rgb(0 0 0 / 0.15);
   --shadow-dropdown: 0 2px 4px 0 rgb(0 0 0 / 0.25);
+  --shadow-blog: 0 4px 8px 0 rgb(0 0 0 / 0.1);
+  --shadow-social: 9px 0 8px -8px rgb(0 0 0 / 0.25); /* sombra só à direita do texto das redes sociais */
 
   /* Layout: frame de 1280px com 56px de margem lateral → 1168px de conteúdo */
   --container-content: 73rem;
@@ -46,6 +58,11 @@
   :focus-visible {
     @apply outline-2 outline-offset-2 outline-primary;
   }
+}
+
+/* Faixa da newsletter (Figma: degradê linear de #050505 a #6B6B6B) */
+@utility bg-newsletter {
+  background-image: linear-gradient(105deg, #050505 0%, #050505 62%, #6b6b6b 62.1%, #d9d9d9 100%);
 }
 
 /* Esconde a barra de rolagem sem impedir a rolagem (trilho dos carrosséis) */
