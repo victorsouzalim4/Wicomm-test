@@ -31,6 +31,8 @@ npm run dev
 | `npm run build` | Verifica os tipos (TypeScript) e gera a versão de produção em `dist/` |
 | `npm run preview` | Serve localmente a versão de produção gerada pelo `build` |
 | `npm run lint` | Procura problemas no código |
+| `npm test` | Roda os testes em modo observação (Vitest) |
+| `npm run test:run` | Roda os testes uma vez (para CI) |
 | `npm run format` | Formata o código com o Prettier (e ordena as classes do Tailwind) |
 | `npm run format:check` | Confere a formatação sem alterar nada |
 
@@ -102,6 +104,27 @@ npm pkg set scripts.format="prettier --write ." scripts.format:check="prettier -
 
 - `.prettierrc`: sem ponto e vírgula, aspas simples (o mesmo estilo do template do Vite), e o plugin que ordena as classes do Tailwind
 - `.prettierignore`: ignora build, dependências, `figma-export/` e Markdown (a documentação é escrita à mão)
+
+### 5. Testes (Vitest + Testing Library)
+
+```bash
+npm install -D vitest jsdom @testing-library/react @testing-library/jest-dom @testing-library/user-event
+npm pkg set scripts.test="vitest" scripts.test:run="vitest run"
+```
+
+- `vite.config.ts`: bloco `test` com `environment: 'jsdom'` e `setupFiles: './src/setupTests.ts'`
+- `src/setupTests.ts`: ativa os matchers do jest-dom (`toBeInTheDocument`...) e limpa o DOM depois de cada teste
+- `src/App.test.tsx`: primeiro teste, só para validar a configuração
+
+### 6. Estrutura de pastas e alias `@/`
+
+```bash
+mkdir -p src/assets/icons src/assets/brand src/layout src/sections src/components \
+         src/context src/hooks src/services src/types src/utils public/api
+```
+
+- Organização definida no [ADR-0009](doc/adr/0009-organizacao-layout-sections-components.md). As pastas vazias têm um `.gitkeep` até receber arquivos.
+- Alias `@/` → `src/`, configurado em `vite.config.ts` (`resolve.alias`) e em `tsconfig.app.json` (`paths`). Exemplo: `import App from '@/App'`.
 
 ## O que faria com mais tempo
 

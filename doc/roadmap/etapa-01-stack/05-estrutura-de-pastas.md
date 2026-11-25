@@ -2,43 +2,45 @@
 
 ## Objetivo
 
-Combinar desde o início onde cada coisa fica, para o código crescer organizado.
+Combinar desde o início onde cada coisa fica, para o código crescer organizado. A organização está no [ADR-0009](../../adr/0009-organizacao-layout-sections-components.md), e os dados vêm da API mock do [ADR-0010](../../adr/0010-api-mock-com-json-estatico.md).
 
 ## Estrutura
 
 ```
+public/
+└── api/             # JSONs da API mock (products.json, banners.json...)
 src/
-├── assets/          # imagens otimizadas (WebP/AVIF) e ícones SVG
-├── components/      # um componente por pasta
+├── assets/
+│   ├── brand/       # logos (Amakha, Wicomm, VTEX) e bandeiras de pagamento, em SVG
+│   └── icons/       # ícones de interface, em SVG
+├── layout/          # AnnouncementBar, Header, Footer, WhatsAppButton
+├── sections/        # blocos do <main>: HeroBanner, ProductShelf, BlogSection...
+├── components/      # peças reaproveitáveis: Button, Carousel, ProductCard...
 │   └── Button/
 │       ├── Button.tsx
 │       └── Button.test.tsx   # quando fizer sentido
-├── sections/        # blocos grandes da página (Header, Hero, Vitrine, Footer...)
-├── context/         # CartContext (estado global do carrinho)
-├── hooks/           # hooks reaproveitáveis (useCart, useCarousel...)
-├── data/            # dados mockados (lista de produtos)
-├── types/           # tipos TypeScript compartilhados (Product, CartItem...)
-├── utils/           # funções puras (formatar preço etc.)
+├── context/         # CartContext
+├── hooks/           # useCarousel, useCountdown, useProducts...
+├── services/        # acesso à API mock (fetchJson, productService...)
+├── types/           # tipos compartilhados (Product, CartItem...)
+├── utils/           # funções puras (formatPrice, optimizeImage...)
 ├── App.tsx
 ├── index.css        # @import do Tailwind, @theme (tokens) e estilos base
-└── main.tsx
+├── main.tsx
+└── setupTests.ts
 ```
 
 ## Convenções
 
 - Componentes em `PascalCase`, hooks começando com `use`, demais arquivos em `camelCase`
 - Estilo com classes do Tailwind dentro do próprio componente. O único CSS global é o `index.css`.
-- Os nomes das `sections/` seguem os nomes das seções do Figma. A lista final sai da análise do layout.
+- Imports entre pastas com o alias `@/` (`import { Button } from '@/components/Button/Button'`)
 
 ## Passos
 
-- [ ] Criar as pastas. Pastas vazias levam um `.gitkeep` até receber arquivos.
-- [ ] Configurar o alias `@/` apontando para `src/`, em `vite.config.ts` e `tsconfig.app.json`
+- [x] Criar as pastas, com `.gitkeep` nas vazias
+- [x] Configurar o alias `@/` em `vite.config.ts` e `tsconfig.app.json`
 
-## Pronto quando
-
-A estrutura existe e os imports com `@/` funcionam.
-
-## Commits sugeridos
+## Commits
 
 - `chore: cria estrutura de pastas e alias @/`

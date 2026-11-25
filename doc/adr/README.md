@@ -30,3 +30,4 @@ Um **ADR** (*Architecture Decision Record*) é um documento curto que registra u
 | [0008](0008-imagens-hospedadas-externamente.md) | Imagens hospedadas fora do projeto e referenciadas por URL (Cloudinary) | Aceito | 25/11/2026 |
 | [0009](0009-organizacao-layout-sections-components.md) | Organização em `layout`, `sections` e `components` | Aceito | 25/11/2026 |
 | [0010](0010-api-mock-com-json-estatico.md) | API mock com arquivos JSON servidos pelo próprio site | Aceito | 25/11/2026 |
+| [0011](0011-linter-oxlint.md) | Linter: oxlint no lugar do ESLint | Proposto | 25/11/2026 |
