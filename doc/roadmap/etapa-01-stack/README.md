@@ -26,8 +26,8 @@ Vue, Angular, Svelte, Bootstrap e qualquer outro framework de UI ou CSS. Sass e 
 
 | # | Parte | Status |
 | --- | --- | --- |
-| 1 | [Criar o projeto com Vite](01-criar-projeto-vite.md) | [ ] |
-| 2 | [Configurar o Tailwind](02-configurar-tailwind.md) | [ ] |
+| 1 | [Criar o projeto com Vite](01-criar-projeto-vite.md) | [x] |
+| 2 | [Configurar o Tailwind](02-configurar-tailwind.md) | [x] instalado (o `@theme` e os estilos base esperam os tokens da etapa 2) |
 | 3 | [Configurar ESLint e Prettier](03-eslint-prettier.md) | [ ] |
 | 4 | [Configurar Vitest e Testing Library](04-vitest-testing-library.md) | [ ] |
 | 5 | [Definir a estrutura de pastas](05-estrutura-de-pastas.md) | [ ] |
