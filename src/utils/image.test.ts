@@ -4,9 +4,9 @@ import { buildSrcSet, optimizeImage } from './image'
 const url = 'https://res.cloudinary.com/ycsxevam/image/upload/produto-athena'
 
 describe('optimizeImage', () => {
-  it('insere formato automático, qualidade automática e largura na URL do Cloudinary', () => {
+  it('insere formato e qualidade automáticos e a largura máxima na URL do Cloudinary', () => {
     expect(optimizeImage(url, { width: 400 })).toBe(
-      'https://res.cloudinary.com/ycsxevam/image/upload/f_auto,q_auto,w_400/produto-athena',
+      'https://res.cloudinary.com/ycsxevam/image/upload/f_auto,q_auto,c_limit,w_400/produto-athena',
     )
   })
 
