@@ -12,7 +12,6 @@ src/
 ├── components/      # um componente por pasta
 │   └── Button/
 │       ├── Button.tsx
-│       ├── Button.module.scss
 │       └── Button.test.tsx   # quando fizer sentido
 ├── sections/        # blocos grandes da página (Header, Hero, Vitrine, Footer...)
 ├── context/         # CartContext (estado global do carrinho)
@@ -20,15 +19,15 @@ src/
 ├── data/            # dados mockados (lista de produtos)
 ├── types/           # tipos TypeScript compartilhados (Product, CartItem...)
 ├── utils/           # funções puras (formatar preço etc.)
-├── styles/          # tokens, breakpoints, mixins, global
 ├── App.tsx
+├── index.css        # @import do Tailwind, @theme (tokens) e estilos base
 └── main.tsx
 ```
 
 ## Convenções
 
 - Componentes em `PascalCase`, hooks começando com `use`, demais arquivos em `camelCase`
-- Cada componente tem o próprio `*.module.scss`. Nada de estilo global espalhado.
+- Estilo com classes do Tailwind dentro do próprio componente. O único CSS global é o `index.css`.
 - Os nomes das `sections/` seguem os nomes das seções do Figma. A lista final sai da análise do layout.
 
 ## Passos

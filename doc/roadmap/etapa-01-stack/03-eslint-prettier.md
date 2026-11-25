@@ -7,7 +7,8 @@ Padronizar o código e pegar erros e sobras automaticamente.
 ## Passos
 
 - [ ] Conferir o ESLint que já vem no template do Vite (`eslint.config.js`)
-- [ ] Rodar `npm install -D prettier eslint-config-prettier`
+- [ ] Rodar `npm install -D prettier eslint-config-prettier prettier-plugin-tailwindcss`
+- [ ] Adicionar `prettier-plugin-tailwindcss` em `plugins` no `.prettierrc`. Ele ordena as classes do Tailwind sozinho.
 - [ ] Adicionar `eslint-config-prettier` no fim do `eslint.config.js`, para o ESLint não brigar com o Prettier
 - [ ] Criar `.prettierrc` com o padrão do projeto. Sugestão: `singleQuote: true`, `semi: true`, `trailingComma: "all"`, `printWidth: 100`
 - [ ] Criar `.prettierignore` (`dist`, `node_modules`, `doc/*.pdf`)

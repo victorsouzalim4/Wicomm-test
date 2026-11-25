@@ -8,6 +8,7 @@ Gerar a base do projeto em React + TypeScript na raiz do repositório.
 
 - [ ] Rodar `npm create vite@latest . -- --template react-ts` na raiz. Se o Vite perguntar sobre a pasta não estar vazia (por causa de `doc/`), escolher **ignorar os arquivos existentes**.
 - [ ] Rodar `npm install`
+- [ ] Rodar `npm install lucide-react` (ícones, [ADR-0004](../../adr/0004-icones-lucide.md))
 - [ ] Rodar `npm run dev` e conferir se a página padrão abre
 - [ ] Remover o boilerplate do template: o contador do `App.tsx`, os logos em `src/assets/` e `public/`, e o conteúdo de `App.css` e `index.css`
 - [ ] Ajustar o `index.html`: `lang="pt-BR"`, `<title>` e `<meta name="description">`

@@ -6,6 +6,8 @@ Prazo: 18/11, às 23h59.
 
 Cada etapa tem uma pasta própria. O `README.md` da pasta resume a etapa e cada arquivo numerado é uma parte dela. Cada parte deve virar pelo menos um commit pequeno e descritivo.
 
+As decisões tomadas ao longo das etapas ficam registradas em [`doc/adr/`](../adr/README.md).
+
 ## Etapas
 
 | # | Etapa | Pasta | Status |
