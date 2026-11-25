@@ -74,7 +74,8 @@ Pontos em que o Figma não é claro ou tem inconsistências, e o que foi decidid
 | No Figma | Decisão | Por quê |
 | --- | --- | --- |
 | O card mostra "R$ 255" e "12x R$ 18,75 sem juros", mas 12 × 18,75 = R$ 225 | As parcelas são **calculadas a partir do preço**: 12x de R$ 21,25. O JSON guarda só o preço e o número de parcelas. | Um valor calculado nunca fica inconsistente com o preço, mesmo quando o preço muda |
-| Só o primeiro card de cada vitrine mostra o botão "COMPRAR" | É o **estado de hover** do card. No celular, onde não existe hover, o botão fica sempre visível. | É o padrão de vitrines de e-commerce, e o Figma mostra um card "ativo" ao lado de outros "em repouso" |
+| Só o primeiro card de cada vitrine mostra o botão "COMPRAR" | É o **estado de hover** do card: o botão aparece sobre a parte de baixo da imagem, como no Figma, também com foco do teclado. No celular, onde não existe hover, ele fica sempre visível. | É o padrão de vitrines de e-commerce, e o Figma mostra um card "ativo" ao lado de outros "em repouso" |
+| As vitrines têm setas e bolinhas, mas os 5 produtos cabem lado a lado no desktop | Setas e bolinhas só aparecem quando há mais conteúdo do que cabe na tela. As setas ficam escondidas no celular, onde se navega arrastando. | Controles que não fazem nada confundem quem usa a página |
 | As tags "Cupom com 15% off" e "Dia do Consumidor" aparecem só no primeiro card | As tags são **dados do produto** (`tags` no JSON): só o Athena tem, e elas aparecem sempre | Tag de cupom é informação do produto, não um efeito visual |
 | O selo diz "10%", mas R$ 320 → R$ 255 é 20% de desconto | O percentual do selo é **calculado a partir dos preços** ("-20%") | Mesmo princípio das parcelas: valores derivados não podem contradizer os preços |
 | Os 5 cards têm o mesmo nome ("Perfume Feminino Athena...") com fotos de perfumes diferentes | Cada produto recebeu o nome da foto (Athena, Fortune, RB, DB Romântica, Chic Woman) | Nome e foto que não batem confundiriam o carrinho |
@@ -174,6 +175,16 @@ Sem dependências novas. O fluxo é `componente → hook (src/hooks) → serviç
 
 - `tsconfig.app.json`: `resolveJsonModule: true`, para os testes importarem os JSONs reais da API mock e conferirem o formato deles
 - `.env.example`: documenta a variável `VITE_API_URL`
+
+### 12. Ícones como componentes React
+
+```bash
+npm install -D vite-plugin-svgr
+```
+
+- `vite.config.ts`: plugin `svgr()`. Com ele, `import Heart from './heart.svg?react'` vira um componente, e o SVG entra no HTML herdando a cor do texto (`currentColor`). Uma imagem `<img src="heart.svg">` não herdaria.
+- `src/vite-env.d.ts`: tipos do plugin (`vite-plugin-svgr/client`)
+- `src/index.css`: novos tokens do Figma (texto de 13px, altura de linha de 131%, espaçamento de letras do botão e do selo, dourado das tags, cinza das bolinhas) e o utilitário `scrollbar-hidden` do carrossel
 
 ## O que faria com mais tempo
 
