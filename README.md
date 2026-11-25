@@ -44,7 +44,7 @@ npm run dev
 | [TypeScript](https://www.typescriptlang.org/) | Tipagem do código |
 | [Vite](https://vite.dev/) | Servidor de desenvolvimento e build |
 | [Tailwind CSS 4](https://tailwindcss.com/) | Estilo |
-| [Lucide](https://lucide.dev/) | Ícones |
+| Vuesax/Iconsax (SVGs exportados do Figma) | Ícones |
 
 ## Decisões
 
@@ -54,7 +54,7 @@ Cada decisão está registrada em um ADR (*Architecture Decision Record*) em [`d
 | --- | --- |
 | React para a interface e Tailwind para o estilo | [ADR-0002](doc/adr/0002-react-e-tailwind.md) |
 | TypeScript, Vite, Vitest e Vercel | [ADR-0003](doc/adr/0003-typescript-vite-vitest-vercel.md) |
-| Ícones com Lucide | [ADR-0004](doc/adr/0004-icones-lucide.md) |
+| Ícones Vuesax exportados do Figma em SVG (substitui o Lucide) | [ADR-0012](doc/adr/0012-icones-vuesax-exportados-do-figma.md) |
 | Carrossel genérico feito à mão | [ADR-0005](doc/adr/0005-carrossel-generico-proprio.md) |
 | Estado do carrinho com Context, `useReducer` e `localStorage` | [ADR-0006](doc/adr/0006-estado-do-carrinho.md) |
 | Prettier para formatação (o linter do ADR-0007 foi substituído) | [ADR-0007](doc/adr/0007-eslint-e-prettier.md) |
@@ -104,7 +104,7 @@ npm install tailwindcss @tailwindcss/vite
 - `vite.config.ts`: plugin `tailwindcss()` adicionado à lista de `plugins`
 - `src/index.css`: conteúdo trocado por `@import 'tailwindcss';`
 
-### 3. Ícones
+### 3. Ícones (Lucide, removido no passo 9)
 
 ```bash
 npm install lucide-react
@@ -153,6 +153,18 @@ npm install @fontsource/poppins @fontsource/inter
 
 - `src/main.tsx`: importa só os pesos usados no Figma, no subconjunto latino (Poppins 300, 500, 600 e 700; Inter 500). As fontes são servidas pelo próprio site em WOFF2, sem depender do Google Fonts.
 - `src/index.css`: bloco `@theme` com os tokens do Figma (fontes, cores, sombras e largura do conteúdo) e estilos base (fonte padrão e foco visível amarelo para navegação por teclado).
+
+### 9. Ícones do Figma no lugar do Lucide
+
+```bash
+npm uninstall lucide-react
+```
+
+Os ícones do layout são do pacote Vuesax/Iconsax, não do Lucide. Os 12 ícones usados foram exportados do Figma em SVG para `src/assets/icons/`, com as cores fixas trocadas por `currentColor`. Motivo: [ADR-0012](doc/adr/0012-icones-vuesax-exportados-do-figma.md).
+
+### 10. API mock
+
+Os dados da página ficam em `public/api/*.json` (formato em `src/types/api.ts`), com as URLs das imagens no Cloudinary. Não precisa de nenhum comando: o Vite serve a pasta `public/` em desenvolvimento e a copia para `dist/` no build. Motivo: [ADR-0010](doc/adr/0010-api-mock-com-json-estatico.md).
 
 ## O que faria com mais tempo
 

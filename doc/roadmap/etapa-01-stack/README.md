@@ -11,7 +11,7 @@
 | Build | Vite | [ADR-0003](../../adr/0003-typescript-vite-vitest-vercel.md) |
 | Testes | Vitest + Testing Library | [ADR-0003](../../adr/0003-typescript-vite-vitest-vercel.md) |
 | Deploy | Vercel | [ADR-0003](../../adr/0003-typescript-vite-vitest-vercel.md) |
-| Ícones | Lucide (`lucide-react`), com SVG do Figma para marcas e ícones sem equivalente fiel | [ADR-0004](../../adr/0004-icones-lucide.md) |
+| Ícones | Vuesax, exportados do Figma em SVG (`src/assets/icons/`) | [ADR-0012](../../adr/0012-icones-vuesax-exportados-do-figma.md) |
 | Carrossel | Componente `Carousel` genérico feito por nós, com scroll-snap | [ADR-0005](../../adr/0005-carrossel-generico-proprio.md) |
 | Estado do carrinho | Context + `useReducer`, salvo no `localStorage` | [ADR-0006](../../adr/0006-estado-do-carrinho.md) |
 | Qualidade | oxlint (com `jsx-a11y`) + Prettier (com `prettier-plugin-tailwindcss`) | [ADR-0011](../../adr/0011-linter-oxlint.md), [ADR-0007](../../adr/0007-eslint-e-prettier.md) |

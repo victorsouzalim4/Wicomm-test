@@ -39,7 +39,7 @@ Levar para o `@theme` do `src/index.css` (Tailwind) todos os valores visuais do 
 - [x] `@theme` no `src/index.css`: `--font-sans`, `--font-badge`, `--color-primary`, `--color-announcement`, `--color-surface-50/100/200`, `--shadow-header/card/dropdown`, `--container-content` (1168px)
 - [x] Estilos base: fonte padrão no `body` e foco visível amarelo (`:focus-visible`)
 - [ ] Paleta Yellow 50–900 do Figma: só entra se algum componente usar um tom que não seja o `#FFB802`
-- [ ] Ícones: aguardando a decisão Vuesax × Lucide
+- [x] Ícones: 12 ícones Vuesax exportados do Figma em `src/assets/icons/`, com `currentColor` ([ADR-0012](../../adr/0012-icones-vuesax-exportados-do-figma.md))
 - Ponto de atenção: a Inter (24 KB) é usada só no selo "10%". Se a nota de performance apertar, trocar pela Poppins é uma economia fácil.
 
 Os raios (8px no card, 4px no selo) e os breakpoints usam os padrões do Tailwind (`rounded-lg`, `rounded`, `md:`, `lg:`, `xl:` = 1280px), então não precisaram de tokens próprios.

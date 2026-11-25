@@ -1,6 +1,6 @@
 # ADR-0004 — Ícones com Lucide
 
-- **Status:** Aceito
+- **Status:** Substituído pelo [ADR-0012](0012-icones-vuesax-exportados-do-figma.md): os ícones do Figma são Vuesax, não Lucide
 - **Data:** 25/11/2026
 - **Etapa do roadmap:** [Etapa 1 — Definir a stack](../roadmap/etapa-01-stack/README.md)
 
