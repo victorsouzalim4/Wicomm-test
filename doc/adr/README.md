@@ -27,3 +27,4 @@ Um **ADR** (*Architecture Decision Record*) é um documento curto que registra u
 | [0005](0005-carrossel-generico-proprio.md) | Carrossel genérico feito à mão | Aceito | 25/11/2026 |
 | [0006](0006-estado-do-carrinho.md) | Estado do carrinho com Context, `useReducer` e `localStorage` | Aceito | 25/11/2026 |
 | [0007](0007-eslint-e-prettier.md) | Padronização de código com ESLint e Prettier | Aceito | 25/11/2026 |
+| [0008](0008-imagens-hospedadas-externamente.md) | Imagens hospedadas fora do projeto e referenciadas por URL | Proposto | 25/11/2026 |
