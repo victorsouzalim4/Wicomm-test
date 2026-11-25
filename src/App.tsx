@@ -1,7 +1,12 @@
+import { ProductShelf } from '@/sections/ProductShelf/ProductShelf'
+
 function App() {
   return (
-    <main className="mx-auto flex min-h-screen max-w-content items-center justify-center px-4">
-      <h1 className="text-xl font-semibold">Wicomm Test</h1>
+    <main>
+      <h1 className="sr-only">Amakha Paris: perfumes, cosméticos e bem-estar</h1>
+      <ProductShelf shelfId="favorites" />
+      <ProductShelf shelfId="perfumes" />
+      <ProductShelf shelfId="beauty-routine" />
     </main>
   )
 }
