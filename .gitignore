@@ -23,5 +23,5 @@ dist-ssr
 *.sln
 *.sw?
 
-# Imagens originais exportadas do Figma (hospedadas no Cloudinary, ver ADR-0008)
-figma-export/
+# Imagens originais (PNG) exportadas do Figma: ficam no Cloudinary (ADR-0008). Os SVGs ficam versionados em src/assets/
+figma-export/**/*.png
