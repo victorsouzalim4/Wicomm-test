@@ -1,0 +1,87 @@
+{
+  "products": [
+    {
+      "id": "athena",
+      "name": "Perfume Feminino Athena 100ml Amakha Paris",
+      "href": "/produto/perfume-athena-100ml",
+      "price": 25500,
+      "listPrice": 32000,
+      "installments": 12,
+      "freeShipping": true,
+      "tags": [
+        { "label": "Cupom com 15% off", "variant": "dark" },
+        { "label": "Dia do Consumidor", "variant": "highlight" }
+      ],
+      "image": {
+        "url": "https://res.cloudinary.com/ycsxevam/image/upload/produto-athena",
+        "alt": "Frasco do perfume Athena 100ml ao lado da caixa rosa",
+        "width": 184,
+        "height": 184
+      }
+    },
+    {
+      "id": "fortune",
+      "name": "Perfume Fortune 100ml Amakha Paris",
+      "href": "/produto/perfume-fortune-100ml",
+      "price": 25500,
+      "listPrice": 32000,
+      "installments": 12,
+      "freeShipping": true,
+      "tags": [],
+      "image": {
+        "url": "https://res.cloudinary.com/ycsxevam/image/upload/produto-fortune",
+        "alt": "Frasco do perfume Fortune 100ml ao lado da caixa dourada",
+        "width": 184,
+        "height": 184
+      }
+    },
+    {
+      "id": "rb",
+      "name": "Perfume RB 100ml Amakha Paris",
+      "href": "/produto/perfume-rb-100ml",
+      "price": 25500,
+      "listPrice": 32000,
+      "installments": 12,
+      "freeShipping": true,
+      "tags": [],
+      "image": {
+        "url": "https://res.cloudinary.com/ycsxevam/image/upload/produto-rb",
+        "alt": "Frasco do perfume RB 100ml ao lado da caixa preta",
+        "width": 184,
+        "height": 184
+      }
+    },
+    {
+      "id": "db",
+      "name": "Perfume Feminino DB Romântica 100ml Amakha Paris",
+      "href": "/produto/perfume-db-romantica-100ml",
+      "price": 25500,
+      "listPrice": 32000,
+      "installments": 12,
+      "freeShipping": true,
+      "tags": [],
+      "image": {
+        "url": "https://res.cloudinary.com/ycsxevam/image/upload/produto-db",
+        "alt": "Frasco do perfume DB Romântica 100ml ao lado da caixa preta e rosa",
+        "width": 184,
+        "height": 184
+      }
+    },
+    {
+      "id": "chic",
+      "name": "Perfume Feminino Chic Woman 100ml Amakha Paris",
+      "href": "/produto/perfume-chic-woman-100ml",
+      "price": 25500,
+      "listPrice": 32000,
+      "installments": 12,
+      "freeShipping": true,
+      "tags": [],
+      "image": {
+        "url": "https://res.cloudinary.com/ycsxevam/image/upload/produto-chic",
+        "alt": "Frasco do perfume Chic Woman 100ml ao lado da caixa branca e amarela",
+        "width": 184,
+        "height": 184
+      }
+    }
+  ]
+}

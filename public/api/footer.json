@@ -1,0 +1,58 @@
+{
+  "newsletter": {
+    "title": "Aceita receber nossas ofertas e conteúdos exclusivos?",
+    "subtitle": "Saiba também das promoções em primeira mão"
+  },
+  "about": {
+    "text": "O nome Amakha tem origem no idioma Zulu, uma das 11 línguas oficiais da África do Sul, e significa perfume, essência. Esse nome foi escolhido pela origem desse idioma, que...",
+    "href": "/institucional/quem-somos"
+  },
+  "columns": [
+    {
+      "title": "Institucional",
+      "links": [
+        { "label": "Quem Somos", "href": "/institucional/quem-somos" },
+        { "label": "Mapa do Site", "href": "/mapa-do-site" }
+      ]
+    },
+    {
+      "title": "Representante",
+      "links": [
+        { "label": "Já sou Consultor", "href": "/revenda/ja-sou-consultor" },
+        { "label": "Quero Ser Consultor", "href": "/revenda/quero-ser-consultor" },
+        { "label": "Encontre um Consultor", "href": "/revenda/encontre-um-consultor" }
+      ]
+    },
+    {
+      "title": "Ajuda",
+      "links": [
+        { "label": "Como comprar", "href": "/ajuda/como-comprar" },
+        { "label": "Política de Privacidade", "href": "/ajuda/politica-de-privacidade" },
+        { "label": "Política de Entrega", "href": "/ajuda/politica-de-entrega" },
+        { "label": "Trocas Devoluções/Reembolsos", "href": "/ajuda/trocas-e-devolucoes" }
+      ]
+    }
+  ],
+  "contact": {
+    "phone": "(11) 2388-8203",
+    "phoneNote": "custo de ligação local",
+    "email": "suporte@amakhaparis.com.br"
+  },
+  "addresses": [
+    { "label": "Sede", "address": "R. do Sacramento, 522 São Bernardo do Campo – SP 09640-000" },
+    { "label": "Filial Manaus", "address": "Pc Chile, Nº 80 – Adrianópolis" },
+    { "label": "Filial Belém", "address": "Av Nazaré, Nº 731 – Nazaré" }
+  ],
+  "social": [
+    { "network": "facebook", "href": "https://www.facebook.com/amakhaoficial" },
+    { "network": "youtube", "href": "https://www.youtube.com/@amakhaoficial" },
+    { "network": "instagram", "href": "https://www.instagram.com/amakhaoficial/" }
+  ],
+  "seal": {
+    "url": "https://res.cloudinary.com/ycsxevam/image/upload/footer-selo-qualidade",
+    "alt": "Selo Premium Quality International Amakha Paris",
+    "width": 1200,
+    "height": 1200
+  },
+  "paymentMethods": ["amex", "diners", "visa", "mastercard", "elo", "pix", "boleto"]
+}

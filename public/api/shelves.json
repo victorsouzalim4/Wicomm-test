@@ -1,0 +1,19 @@
+{
+  "shelves": [
+    {
+      "id": "favorites",
+      "title": "Os Preferidos da Amakha Paris",
+      "productIds": ["athena", "fortune", "rb", "db", "chic"]
+    },
+    {
+      "id": "perfumes",
+      "title": "Perfumes que despertam emoções: Experimente a magia da Amakha Paris",
+      "productIds": ["athena", "fortune", "rb", "db", "chic"]
+    },
+    {
+      "id": "beauty-routine",
+      "title": "Sua rotina de beleza e bem estar para brilhar todos os dias",
+      "productIds": ["athena", "fortune", "rb", "db", "chic"]
+    }
+  ]
+}

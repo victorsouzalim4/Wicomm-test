@@ -1,0 +1,37 @@
+{
+  "title": "Fique por dentro das nossas redes sociais",
+  "handle": "@amakhaoficial",
+  "profileUrl": "https://www.instagram.com/amakhaoficial/",
+  "posts": [
+    {
+      "id": "dia-das-criancas",
+      "href": "https://www.instagram.com/amakhaoficial/",
+      "image": {
+        "url": "https://res.cloudinary.com/ycsxevam/image/upload/social-dia-das-criancas",
+        "alt": "Post de Feliz Dia das Crianças com duas crianças sorrindo",
+        "width": 1080,
+        "height": 1350
+      }
+    },
+    {
+      "id": "cuide-de-voce",
+      "href": "https://www.instagram.com/amakhaoficial/",
+      "image": {
+        "url": "https://res.cloudinary.com/ycsxevam/image/upload/social-cuide-de-voce",
+        "alt": "Post \"Cuide de você para cuidar da sua família\" com suplementos Amakha Paris",
+        "width": 1080,
+        "height": 1350
+      }
+    },
+    {
+      "id": "hidratacao-familia",
+      "href": "https://www.instagram.com/amakhaoficial/",
+      "image": {
+        "url": "https://res.cloudinary.com/ycsxevam/image/upload/social-hidratacao-familia",
+        "alt": "Post \"Hidratação para toda família\" com uma mulher passando creme no rosto",
+        "width": 1080,
+        "height": 1350
+      }
+    }
+  ]
+}

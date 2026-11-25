@@ -1,0 +1,41 @@
+{
+  "title": "Nosso Blog",
+  "posts": [
+    {
+      "id": "dermocosmeticos-capilares",
+      "title": "Agora é a vez dos dermocosméticos capilares",
+      "excerpt": "Rotina sistemática de cuidados com os cabelos é uma nova tendência de beleza. Há alguns anos, vimos crescer a prática do skin care, rotina de cuidados com a pele do rosto...",
+      "href": "/blog/dermocosmeticos-capilares",
+      "image": {
+        "url": "https://res.cloudinary.com/ycsxevam/image/upload/blog-dermocosmeticos",
+        "alt": "Três frascos de dermocosméticos capilares Amakha Paris",
+        "width": 1200,
+        "height": 447
+      }
+    },
+    {
+      "id": "bloom-amakha-collection",
+      "title": "Crie o seu perfume com Bloom Amakha Collection",
+      "excerpt": "Conheça o estojo de perfumes Bloom, lançamento mais recente da Amakha Paris, que, dentre tantos atributos singulares que possui, te permite fazer diferentes combinações de fragrâncias e criar sua assinatura pessoal...",
+      "href": "/blog/bloom-amakha-collection",
+      "image": {
+        "url": "https://res.cloudinary.com/ycsxevam/image/upload/blog-bloom",
+        "alt": "Estojo de perfumes Bloom aberto, com frascos e flores",
+        "width": 1200,
+        "height": 896
+      }
+    },
+    {
+      "id": "teste-de-personalidade",
+      "title": "Confiante ou poderosa? Teste sua personalidade e descubra o seu tipo de perfume!",
+      "excerpt": "Desenvolvemos um teste rápido para você descobrir qual sua personalidade feminina: Poderosa, Confiante ou a combinação das duas...",
+      "href": "/blog/teste-de-personalidade",
+      "image": {
+        "url": "https://res.cloudinary.com/ycsxevam/image/upload/blog-personalidade",
+        "alt": "Duas versões da mesma mulher, uma com fundo claro e outra com fundo vermelho",
+        "width": 1200,
+        "height": 447
+      }
+    }
+  ]
+}

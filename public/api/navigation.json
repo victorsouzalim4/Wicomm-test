@@ -1,0 +1,65 @@
+{
+  "items": [
+    {
+      "label": "Perfumaria",
+      "href": "/perfumaria",
+      "children": [
+        { "label": "Perfumes femininos", "href": "/perfumaria/femininos" },
+        { "label": "Perfumes masculinos", "href": "/perfumaria/masculinos" },
+        { "label": "Perfumes de bolso", "href": "/perfumaria/de-bolso" },
+        { "label": "Kits", "href": "/perfumaria/kits" }
+      ]
+    },
+    {
+      "label": "Cabelos",
+      "href": "/cabelos",
+      "children": [
+        { "label": "Shampoos", "href": "/cabelos/shampoos" },
+        { "label": "Condicionadores", "href": "/cabelos/condicionadores" },
+        { "label": "Máscaras", "href": "/cabelos/mascaras" },
+        { "label": "Finalizadores", "href": "/cabelos/finalizadores" }
+      ]
+    },
+    {
+      "label": "Corpo e Banho",
+      "href": "/corpo-e-banho",
+      "children": [
+        { "label": "Sabonetes", "href": "/corpo-e-banho/sabonetes" },
+        { "label": "Cremes hidratantes", "href": "/corpo-e-banho/cremes-hidratantes" },
+        { "label": "Esfoliantes", "href": "/corpo-e-banho/esfoliantes" }
+      ]
+    },
+    {
+      "label": "Rosto",
+      "href": "/rosto",
+      "children": [
+        { "label": "Limpeza", "href": "/rosto/limpeza" },
+        { "label": "Hidratação", "href": "/rosto/hidratacao" },
+        { "label": "Proteção solar", "href": "/rosto/protecao-solar" }
+      ]
+    },
+    {
+      "label": "Nutricional",
+      "href": "/nutricional",
+      "children": [
+        { "label": "Suplementos", "href": "/nutricional/suplementos" },
+        { "label": "Vitaminas", "href": "/nutricional/vitaminas" }
+      ]
+    },
+    {
+      "label": "Revenda",
+      "href": "/revenda",
+      "variant": "reseller",
+      "children": [
+        { "label": "Já sou consultor", "href": "/revenda/ja-sou-consultor" },
+        { "label": "Quero ser consultor", "href": "/revenda/quero-ser-consultor" },
+        { "label": "Encontre um consultor", "href": "/revenda/encontre-um-consultor" }
+      ]
+    },
+    {
+      "label": "Promoções",
+      "href": "/promocoes",
+      "variant": "promo"
+    }
+  ]
+}

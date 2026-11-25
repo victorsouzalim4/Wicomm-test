@@ -1,0 +1,37 @@
+{
+  "announcement": {
+    "parts": [{ "text": "Semana do " }, { "text": "Consumidor", "bold": true }],
+    "badge": "Frete grátis em compras acima de 199,90 R$"
+  },
+  "offer": {
+    "title": "Ofertas limitadas",
+    "subtitle": "Produtos com preços imperdíveis",
+    "endsAt": "2027-01-31T23:59:59-03:00"
+  },
+  "benefits": [
+    {
+      "id": "pix",
+      "icon": "pix",
+      "layout": "inline",
+      "parts": [{ "text": "3% OFF", "bold": true }, { "text": "no PIX" }]
+    },
+    {
+      "id": "frete",
+      "icon": "truck",
+      "layout": "stacked",
+      "parts": [{ "text": "Frete grátis", "bold": true }, { "text": "acima R$ 149,90" }]
+    },
+    {
+      "id": "parcelamento",
+      "icon": "card",
+      "layout": "stacked",
+      "parts": [{ "text": "Parcele em até" }, { "text": "6x sem juros", "bold": true }]
+    },
+    {
+      "id": "lojas",
+      "icon": "store",
+      "layout": "inline",
+      "parts": [{ "text": "Nossas" }, { "text": "lojas", "bold": true }]
+    }
+  ]
+}

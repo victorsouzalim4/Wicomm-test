@@ -1,0 +1,38 @@
+{
+  "title": "Nossas Causas",
+  "causes": [
+    {
+      "id": "pontos-de-apoio",
+      "title": "Pontos de Apoio",
+      "description": "Em todo o Brasil, você encontra Pontos de Apoio para adquirir os produtos. E você também pode ser o empreendedor de um deles.",
+      "image": {
+        "url": "https://res.cloudinary.com/ycsxevam/image/upload/causa-pontos-de-apoio",
+        "alt": "Mapa do Brasil com um carrinho de compras",
+        "width": 250,
+        "height": 275
+      }
+    },
+    {
+      "id": "empreendedorismo",
+      "title": "Empreendedorismo",
+      "description": "O Projeto Divas possibilita que as mulheres tenham total independência financeira com uma visão empreendedora.",
+      "image": {
+        "url": "https://res.cloudinary.com/ycsxevam/image/upload/causa-divas",
+        "alt": "Logotipo do Projeto Divas Amakha Paris",
+        "width": 250,
+        "height": 275
+      }
+    },
+    {
+      "id": "amakha-social",
+      "title": "Amakha Social",
+      "description": "Ajudar o próximo é e sempre será um dos pilares da Amakha Paris. O projeto social é vital para a nossa empresa.",
+      "image": {
+        "url": "https://res.cloudinary.com/ycsxevam/image/upload/causa-amakha-social",
+        "alt": "Logotipo do Amakha Social, um coração verde",
+        "width": 250,
+        "height": 275
+      }
+    }
+  ]
+}

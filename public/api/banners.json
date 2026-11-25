@@ -1,0 +1,120 @@
+{
+  "hero": {
+    "items": [
+      {
+        "id": "hero-perfume-de-bolso",
+        "href": "/promocoes/compre-e-ganhe",
+        "image": {
+          "url": "https://res.cloudinary.com/ycsxevam/image/upload/hero-compre-perfume-ganhe",
+          "alt": "Compre um perfume 100ml e ganhe um perfume de bolso. Saiba mais",
+          "width": 2566,
+          "height": 744
+        }
+      }
+    ]
+  },
+  "launches": {
+    "title": "Potencialize sua saúde com os nossos lançamentos",
+    "items": [
+      {
+        "id": "mel-capilar",
+        "href": "/cabelos/linha-mel-capilar",
+        "image": {
+          "url": "https://res.cloudinary.com/ycsxevam/image/upload/lancamento-mel-capilar",
+          "alt": "Linha Mel Capilar: brilho radiante e nutrição poderosa. Kit completo com 25% off. Aproveite",
+          "width": 767,
+          "height": 941
+        }
+      },
+      {
+        "id": "magic-repair",
+        "href": "/cabelos/linha-magic-repair",
+        "image": {
+          "url": "https://res.cloudinary.com/ycsxevam/image/upload/lancamento-magic-repair",
+          "alt": "Linha Magic Repair: hidratação de auto impacto. Aproveite",
+          "width": 767,
+          "height": 470
+        }
+      },
+      {
+        "id": "magic-curly",
+        "href": "/cabelos/linha-magic-curly",
+        "image": {
+          "url": "https://res.cloudinary.com/ycsxevam/image/upload/lancamento-magic-curly",
+          "alt": "Linha Magic Curly: ideal para fios cacheados, ondulados e crespos. Aproveite",
+          "width": 767,
+          "height": 470
+        }
+      }
+    ]
+  },
+  "haircare": {
+    "title": "Desvende o segredo dos cabelos perfeitos com nosso cronograma capilar",
+    "items": [
+      {
+        "id": "home-spa",
+        "href": "/corpo-e-banho/home-spa",
+        "image": {
+          "url": "https://res.cloudinary.com/ycsxevam/image/upload/cronograma-home-spa",
+          "alt": "Crie o seu próprio Home Spa. Compre",
+          "width": 881,
+          "height": 1309
+        }
+      },
+      {
+        "id": "sabonetes-cremes",
+        "href": "/corpo-e-banho/sabonetes-cremes-esfoliantes",
+        "image": {
+          "url": "https://res.cloudinary.com/ycsxevam/image/upload/cronograma-sabonetes-cremes",
+          "alt": "Sabonetes, cremes e esfoliantes para sua rotina de cuidados. Compre",
+          "width": 881,
+          "height": 1309
+        }
+      },
+      {
+        "id": "cremes-hidratantes",
+        "href": "/corpo-e-banho/cremes-hidratantes",
+        "image": {
+          "url": "https://res.cloudinary.com/ycsxevam/image/upload/cronograma-cremes-hidratantes",
+          "alt": "Cremes hidratantes com fragrâncias Amakha Paris. Compre",
+          "width": 881,
+          "height": 1309
+        }
+      },
+      {
+        "id": "suplementos",
+        "href": "/nutricional/suplementos-e-vitaminas",
+        "image": {
+          "url": "https://res.cloudinary.com/ycsxevam/image/upload/cronograma-suplementos",
+          "alt": "Suplementos e vitaminas para o seu dia a dia. Compre",
+          "width": 881,
+          "height": 1309
+        }
+      }
+    ]
+  },
+  "reseller": {
+    "items": [
+      {
+        "id": "independencia-financeira",
+        "href": "/revenda/quero-ser-consultor",
+        "image": {
+          "url": "https://res.cloudinary.com/ycsxevam/image/upload/consultor-independencia-financeira",
+          "alt": "Na Amakha Paris você conquista a sua independência financeira com baixo investimento",
+          "width": 572,
+          "height": 331
+        }
+      },
+      {
+        "id": "maos-produto",
+        "href": "/revenda/encontre-um-consultor",
+        "image": {
+          "url": "https://res.cloudinary.com/ycsxevam/image/upload/consultor-maos-produto",
+          "alt": "Consultora entregando um produto Amakha Paris a uma cliente",
+          "width": 1144,
+          "height": 662
+        }
+      }
+    ]
+  }
+}
