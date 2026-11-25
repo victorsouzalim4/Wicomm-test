@@ -1,0 +1,8 @@
+dist
+node_modules
+package-lock.json
+figma-export
+doc
+
+# Documentação é escrita à mão: o Prettier só formata código
+*.md

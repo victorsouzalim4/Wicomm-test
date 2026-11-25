@@ -31,6 +31,8 @@ npm run dev
 | `npm run build` | Verifica os tipos (TypeScript) e gera a versão de produção em `dist/` |
 | `npm run preview` | Serve localmente a versão de produção gerada pelo `build` |
 | `npm run lint` | Procura problemas no código |
+| `npm run format` | Formata o código com o Prettier (e ordena as classes do Tailwind) |
+| `npm run format:check` | Confere a formatação sem alterar nada |
 
 ## Tecnologias
 
@@ -90,6 +92,16 @@ npm install tailwindcss @tailwindcss/vite
 ```bash
 npm install lucide-react
 ```
+
+### 4. Prettier
+
+```bash
+npm install -D prettier prettier-plugin-tailwindcss
+npm pkg set scripts.format="prettier --write ." scripts.format:check="prettier --check ."
+```
+
+- `.prettierrc`: sem ponto e vírgula, aspas simples (o mesmo estilo do template do Vite), e o plugin que ordena as classes do Tailwind
+- `.prettierignore`: ignora build, dependências, `figma-export/` e Markdown (a documentação é escrita à mão)
 
 ## O que faria com mais tempo
 
