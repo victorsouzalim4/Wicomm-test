@@ -28,3 +28,4 @@ Um **ADR** (*Architecture Decision Record*) é um documento curto que registra u
 | [0006](0006-estado-do-carrinho.md) | Estado do carrinho com Context, `useReducer` e `localStorage` | Aceito | 25/11/2026 |
 | [0007](0007-eslint-e-prettier.md) | Padronização de código com ESLint e Prettier | Aceito | 25/11/2026 |
 | [0008](0008-imagens-hospedadas-externamente.md) | Imagens hospedadas fora do projeto e referenciadas por URL | Proposto | 25/11/2026 |
+| [0009](0009-organizacao-layout-sections-components.md) | Organização em `layout`, `sections` e `components` | Aceito | 25/11/2026 |

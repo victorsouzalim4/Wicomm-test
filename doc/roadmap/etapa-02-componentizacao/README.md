@@ -16,10 +16,11 @@ Antes de escrever o primeiro componente, quebrar o layout do Figma em **seções
 | # | Parte | Status |
 | --- | --- | --- |
 | 1 | [Extrair os design tokens do Figma](01-design-tokens.md) | [ ] |
-| 2 | [Mapear as seções da página](02-mapear-secoes.md) | [ ] |
-| 3 | [Identificar os componentes reaproveitáveis](03-componentes-reaproveitaveis.md) | [ ] |
-| 4 | [Montar a árvore de componentes](04-arvore-de-componentes.md) | [ ] |
+| 2 | [Mapear as seções da página](02-mapear-secoes.md) | [x] |
+| 3 | [Identificar os componentes reaproveitáveis](03-componentes-reaproveitaveis.md) | [x] |
+| 4 | [Montar a árvore de componentes](04-arvore-de-componentes.md) | [x] |
 | 5 | [Definir props e tipos](05-props-e-tipos.md) | [ ] |
 | 6 | [Definir a ordem de implementação](06-ordem-de-implementacao.md) | [ ] |
+| 7 | [Inventário de imagens](07-inventario-de-imagens.md) | [x] mapeado (falta exportar) |
 
-> Esta etapa depende do Figma. As listas de seções e componentes abaixo são **hipóteses** de um e-commerce típico e devem ser revisadas com o layout aberto.
+As partes 2, 3, 4 e 7 já foram feitas a partir do Figma real (frame "AMAKHA - HOME", só desktop, 1280px). A organização das pastas está no [ADR-0009](../../adr/0009-organizacao-layout-sections-components.md).

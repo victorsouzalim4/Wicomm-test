@@ -54,6 +54,8 @@ Cada decisão está registrada em um ADR (*Architecture Decision Record*) em [`d
 | Carrossel genérico feito à mão | [ADR-0005](doc/adr/0005-carrossel-generico-proprio.md) |
 | Estado do carrinho com Context, `useReducer` e `localStorage` | [ADR-0006](doc/adr/0006-estado-do-carrinho.md) |
 | Padronização de código com ESLint e Prettier | [ADR-0007](doc/adr/0007-eslint-e-prettier.md) |
+| Imagens hospedadas fora do projeto e referenciadas por URL *(proposto)* | [ADR-0008](doc/adr/0008-imagens-hospedadas-externamente.md) |
+| Organização em `layout`, `sections` e `components` | [ADR-0009](doc/adr/0009-organizacao-layout-sections-components.md) |
 
 O planejamento do trabalho, etapa por etapa, está em [`doc/roadmap/`](doc/roadmap/roadmap.md).
 

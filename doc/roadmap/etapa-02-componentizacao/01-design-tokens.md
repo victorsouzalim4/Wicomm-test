@@ -15,6 +15,24 @@ Levar para o `src/styles/_tokens.scss` todos os valores visuais do Figma, para n
 - [ ] **Ícones:** exportar em SVG
 - [ ] **Imagens:** exportar na resolução certa (as otimizações ficam para a etapa de performance)
 
+## Valores já coletados no Figma
+
+| Token | Valor | Onde aparece |
+| --- | --- | --- |
+| Fonte principal | Poppins: 300, 500, 600, 700 | Todo o texto |
+| Fonte secundária | Inter 500 | Só no selo de desconto. Avaliar trocar por Poppins para carregar uma fonte a menos. |
+| Amarelo (primária) | `#FFB802` | Selo de desconto, "FRETE GRÁTIS", botões de busca e de conta, "CADASTRAR" |
+| Salmão | `#F3A07A` | Fundo da barra de avisos |
+| Preto / branco | `#000000` / `#FFFFFF` | Textos, botão "COMPRAR", fundos de card |
+| Cinzas de fundo | `#F0F0F0` (Gray-4), `#F5F5F5`, `#EEEEEE` | Ofertas, vantagens, causas e footer |
+| Paleta Yellow 50–900 | estilos de cor do Figma | Ler os valores hex de cada tom |
+| Raio | 8px (card), 4px (selo) | |
+| Sombra do card | `0 0 4px rgba(0,0,0,.15)` | `ProductCard` |
+| Sombra do header | `0 1px 2px rgba(0,0,0,.25)` | `Header` |
+| Sombra do dropdown | `0 2px 4px rgba(0,0,0,.25)` | `Dropdown` |
+| Largura do frame | 1280px | |
+| Largura do conteúdo | 1168px (56px de margem lateral) | `Container` |
+
 ## Pronto quando
 
 O `_tokens.scss` tem todos os valores, com nomes semânticos (`$color-primary`, não `$blue`).
