@@ -9,12 +9,24 @@
   --font-sans: 'Poppins', ui-sans-serif, system-ui, sans-serif;
   --font-badge: 'Inter', ui-sans-serif, system-ui, sans-serif; /* só no selo de desconto */
 
+  /* Tamanhos de texto: o Figma usa altura de linha de 131% em todos os textos */
+  --text-caption: 0.8125rem; /* 13px: preço "de", tags e selo */
+  --text-caption--line-height: 1.31;
+  --text-sm--line-height: 1.31; /* 14px: nome, preço, parcelas */
+  --text-xl--line-height: 1.31; /* 20px: títulos de seção */
+
+  /* Espaçamento entre letras */
+  --tracking-button: -0.04em; /* "COMPRAR" e tags */
+  --tracking-badge: -0.12em; /* selo de desconto */
+
   /* Cores */
   --color-primary: #ffb802; /* selo de desconto, "FRETE GRÁTIS", botões de busca, conta e newsletter */
+  --color-highlight: #b88400; /* tag de destaque ("Dia do Consumidor") */
   --color-announcement: #f3a07a; /* fundo da barra de avisos */
   --color-surface-50: #f5f5f5; /* barra de vantagens */
   --color-surface-100: #f0f0f0; /* ofertas limitadas */
   --color-surface-200: #eeeeee; /* nossas causas e footer */
+  --color-dot: #d9d9d9; /* bolinhas inativas do carrossel */
 
   /* Sombras */
   --shadow-header: 0 1px 2px 0 rgb(0 0 0 / 0.25);
@@ -33,5 +45,14 @@
   /* Foco visível só na navegação por teclado */
   :focus-visible {
     @apply outline-2 outline-offset-2 outline-primary;
+  }
+}
+
+/* Esconde a barra de rolagem sem impedir a rolagem (trilho dos carrosséis) */
+@utility scrollbar-hidden {
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
   }
 }
