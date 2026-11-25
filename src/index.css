@@ -1,1 +1,37 @@
 @import 'tailwindcss';
+
+/*
+ * Design tokens extraídos do Figma (frame "AMAKHA - HOME", 1280px).
+ * Cada variável vira classes do Tailwind: --color-primary → bg-primary, text-primary...
+ */
+@theme {
+  /* Tipografia */
+  --font-sans: 'Poppins', ui-sans-serif, system-ui, sans-serif;
+  --font-badge: 'Inter', ui-sans-serif, system-ui, sans-serif; /* só no selo de desconto */
+
+  /* Cores */
+  --color-primary: #ffb802; /* selo de desconto, "FRETE GRÁTIS", botões de busca, conta e newsletter */
+  --color-announcement: #f3a07a; /* fundo da barra de avisos */
+  --color-surface-50: #f5f5f5; /* barra de vantagens */
+  --color-surface-100: #f0f0f0; /* ofertas limitadas */
+  --color-surface-200: #eeeeee; /* nossas causas e footer */
+
+  /* Sombras */
+  --shadow-header: 0 1px 2px 0 rgb(0 0 0 / 0.25);
+  --shadow-card: 0 0 4px 0 rgb(0 0 0 / 0.15);
+  --shadow-dropdown: 0 2px 4px 0 rgb(0 0 0 / 0.25);
+
+  /* Layout: frame de 1280px com 56px de margem lateral → 1168px de conteúdo */
+  --container-content: 73rem;
+}
+
+@layer base {
+  body {
+    @apply bg-white font-sans text-black antialiased;
+  }
+
+  /* Foco visível só na navegação por teclado */
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-primary;
+  }
+}

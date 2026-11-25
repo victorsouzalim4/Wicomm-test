@@ -1,7 +1,7 @@
 function App() {
   return (
-    <main className="flex min-h-screen items-center justify-center">
-      <h1 className="text-2xl font-bold">Wicomm Test</h1>
+    <main className="mx-auto flex min-h-screen max-w-content items-center justify-center px-4">
+      <h1 className="text-xl font-semibold">Wicomm Test</h1>
     </main>
   )
 }
