@@ -199,4 +199,25 @@ npm install -D vite-plugin-svgr
 
 ## O que faria com mais tempo
 
-*A preencher ao final do projeto.*
+Esta página é a vitrine de uma loja. Para virar uma loja de verdade, eu seguiria por camadas.
+
+### Front-end
+
+- **Busca funcionando**, com paginação dos resultados
+- **Página de produto** e **fluxo de checkout**: carrinho, entrega, pagamento e confirmação
+- **Testes de ponta a ponta com Playwright** cobrindo o fluxo de compra: busca, produto, carrinho e checkout
+
+### Back-end
+
+- **Uma API real no lugar dos JSONs.** A camada `services/` já isola o acesso aos dados, então a troca seria basicamente mudar o `VITE_API_URL`.
+- **API Gateway** como porta de entrada única, com autenticação, rate limit e roteamento para os serviços
+- **Camada de serviços** separada por domínio: catálogo, busca, carrinho, pedidos e pagamentos
+- **Banco de dados PostgreSQL** para produtos, estoque, clientes e pedidos
+- **Integração com um gateway de pagamento** (Pix, cartão e boleto), confirmando o pedido por webhook
+- **Controle de concorrência do estoque**, para dois clientes não comprarem a última unidade ao mesmo tempo. Seria feito com reserva do item no checkout e trava no banco (`SELECT ... FOR UPDATE` ou controle otimista por versão).
+
+### Infraestrutura
+
+- **Containers (Docker) e Kubernetes** para escalar os serviços conforme o tráfego (autoscaling), com **load balancer** distribuindo as requisições
+- **CI/CD**: lint, testes e build a cada pull request, e deploy automático por ambiente (homologação e produção)
+- **Observabilidade**: logs centralizados, métricas e alertas
