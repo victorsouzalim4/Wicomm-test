@@ -2,6 +2,11 @@
 
 Reprodução de um layout de e-commerce do Figma, feita para o teste prático de Dev Júnior da Wicomm.
 
+- **Página publicada:** https://wicomm-test-weld.vercel.app
+- **Repositório:** https://github.com/victorsouzalim4/Wicomm-test
+
+O deploy é feito pela Vercel, ligada ao GitHub: cada push na `main` publica uma nova versão.
+
 ## Como rodar o projeto
 
 ### Pré-requisitos
