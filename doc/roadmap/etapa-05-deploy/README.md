@@ -16,6 +16,6 @@ Publicar a página e hospedar tudo o que ela consome, para o avaliador abrir um 
 
 | # | Parte | Status |
 | --- | --- | --- |
-| 1 | [Primeiro deploy na Vercel](01-deploy-vercel.md) (fazer cedo, logo depois da etapa 1) | [ ] |
-| 2 | [Hospedar as imagens no Cloudinary](02-imagens-cloudinary.md) | [ ] |
+| 1 | [Primeiro deploy na Vercel](01-deploy-vercel.md) (fazer cedo, logo depois da etapa 1) | [x] |
+| 2 | [Hospedar as imagens no Cloudinary](02-imagens-cloudinary.md) | [x] |
 | 3 | [Verificação final da página publicada](03-verificacao-final.md) | [ ] |

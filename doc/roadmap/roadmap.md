@@ -16,7 +16,7 @@ As decisões tomadas ao longo das etapas ficam registradas em [`doc/adr/`](../ad
 | 2 | Definir a componentização | [etapa-02-componentizacao](etapa-02-componentizacao/README.md) | Em andamento |
 | 3 | Dados: mock via API ou mock direto | [etapa-03-dados-mock](etapa-03-dados-mock/README.md) | A fazer |
 | 4 | Mobile e responsividade | [etapa-04-responsividade](etapa-04-responsividade/README.md) | A fazer |
-| 5 | Deploy e hosting | [etapa-05-deploy](etapa-05-deploy/README.md) | Em andamento (hospedagem das imagens) |
+| 5 | Deploy e hosting | [etapa-05-deploy](etapa-05-deploy/README.md) | Em andamento (falta a verificação final) |
 
 ## Padrão de commits
 
